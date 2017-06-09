@@ -9,6 +9,7 @@
 #define RANK_TREE_H_
 #include <iostream>
 #include "List.h"
+#include "KVPair.h"
 
 enum RollStatus {
 	LR, RR, LL, RL, OK
@@ -28,8 +29,10 @@ class RankTreeNode {
 	Key key;
 	Data data;
 	int height;
-	int num_of_left;
-	int num_of_right;
+	int count_left;
+	int count_right;
+	int sum_left;
+	int sum_right;
 	RankTreeNode<Key, Data>* left_node;
 	RankTreeNode<Key, Data>* right_node;
 public:
@@ -47,8 +50,12 @@ public:
 	void SetRight(RankTreeNode<Key, Data>* right); //Sets the right node
 	int GetNodesLeft();			//Gets the number of nodes left from the node
 	int GetNodesRight();		//Gets the number of nodes right from the node
+	int GetSumLeft();
+	int GetSumRight();
 	void SetNodesLeft(int num);			//Sets the current amount of left nodes;
 	void SetNodesRight(int num);	//Sets the current amount of right nodes;
+	void SetSumLeft(int num);
+	void SetSumRight(int num);
 	int NumOfSons();				//Returns the number of sons the node has
 	void SetHeight(int height);					  //Sets the Height of a node
 	int GetHeightLeft();					//Gets the height of the left node
@@ -132,6 +139,8 @@ public:
 	bool Exists(Key key);
 	void UpdateTreeFromArrays(Key* key_array, int len_key, Data* data_array,
 			int len_data);
+	void RankTree<Key, Data>::UpdateTreeFromPairArr(Pair<Key, Data>* arr, int len);
+	void RankTree<Key, Data>::SetupTreeRanks(RankTreeNode<Key, Data>* root);
 	Key getBiggestKey();
 
 	// Test Functions/////
@@ -163,6 +172,15 @@ public:
 		*array = node->GetKey();
 		addTreeKeys(array + 1, node->GetRight());
 		return;
+	}
+
+	int InorderTreeKeyData(Pair<Key, Data>* arr, RankTreeNode<Key, Data>* node, int index) {
+		if(node == nullptr)
+			return index;
+		index = InorderTreeKeyData(arr, node->GetLeft(), index);
+		arr[index++] = Pair<Key*, Data*>(node->GetKey(), node->GetData());
+		index = InorderTreeKeyData(arr, node->GetRight(), index);
+		return index;
 	}
 
 	int InorderTreeKeys(Key* arr, RankTreeNode<Key, Data>* node, int index) {
@@ -253,8 +271,10 @@ RankTreeNode<Key, Data>::RankTreeNode(Key key, Data data) :
 	this->left_node = nullptr;
 	this->right_node = nullptr;
 	this->height = 0;
-	this->num_of_left = 0;
-	this->num_of_right = 0;
+	this->count_left = 0;
+	this->count_right = 0;
+	this->sum_left = 0;
+	this->sum_right = 0;
 }
 
 template<class Key, class Data>
@@ -264,8 +284,10 @@ RankTreeNode<Key, Data>::RankTreeNode(const RankTreeNode<Key, Data>& avl) {
 	this->left_node = avl.left_node;
 	this->right_node = avl.right_node;
 	this->height = avl.height;
-	this->num_of_left = avl.num_of_left;
-	this->num_of_right = avl.num_of_right;
+	this->count_left = avl.count_left;
+	this->count_right = avl.count_right;
+	this->sum_left = avl.sum_left;
+	this->sum_right = avl.sum_right;
 }
 
 template<class Key, class Data>
@@ -399,21 +421,41 @@ RollStatus RankTreeNode<Key, Data>::GetStatus() {
 
 template<class Key, class Data>
 int RankTreeNode<Key, Data>::GetNodesLeft() {
-	return this->num_of_left;
+	return this->count_left;
 }
 
 template<class Key, class Data>
 int RankTreeNode<Key, Data>::GetNodesRight() {
-	return this->num_of_right;
+	return this->count_right;
+}
+
+template<class Key, class Data>
+int RankTreeNode<Key, Data>::GetSumLeft() {
+	return this->sum_left;
+}
+
+template<class Key, class Data>
+int RankTreeNode<Key, Data>::GetSumRight() {
+	return this->sum_right;
 }
 template<class Key, class Data>
 void RankTreeNode<Key, Data>::SetNodesLeft(int num) {
-	this->num_of_left = num;
+	this->count_left = num;
 }
 
 template<class Key, class Data>
 void RankTreeNode<Key, Data>::SetNodesRight(int num) {
-	this->num_of_right = num;
+	this->count_right = num;
+}
+
+template<class Key, class Data>
+void RankTreeNode<Key, Data>::SetSumLeft(int num) {
+	this->sum_left = num;
+}
+
+template<class Key, class Data>
+void RankTreeNode<Key, Data>::SetSumRight(int num) {
+	this->sum_right = num;
 }
 
 /////////// RankTree functions///////////////////////
@@ -1060,8 +1102,7 @@ bool RankTree<Key, Data>::Exists(Key key) {
 }
 
 template<class Key, class Data>
-RankTreeNode<Key, Data>* BalancedTreeFromArray(RankTreeNode<Key, Data>** arr,
-		int start, int end) {
+RankTreeNode<Key, Data>* BalancedTreeFromArray(RankTreeNode<Key, Data>** arr, int start, int end) {
 	if (start > end)
 		return nullptr;
 	int mid = start + (end - start) / 2;
@@ -1098,8 +1139,46 @@ void SetBalancedTreeHeight(RankTreeNode<Key, Data>* root) {
 }
 
 template<class Key, class Data>
-void RankTree<Key, Data>::UpdateTreeFromArrays(Key* key_array, int len_key,
-		Data* data_array, int len_data) {
+void RankTree<Key, Data>::SetupTreeRanks(RankTreeNode<Key, Data>* root) {
+	if(root == nullptr)
+		return;
+	SetupTreeRanks(root->GetLeft());  //First, set left tree
+	SetupTreeRanks(root->GetRight()); //And set right tree ranks
+	//Then set current ranks according to them.
+	int sum_left = 0, sum_right = 0, cnt_left = 0, cnt_right = 0;
+	if(root->IsLeaf()) {
+		root->SetNodesLeft(0);
+		root->SetNodesRight(0);
+		root->SetSumLeft(0);
+		root->SetSumRight(0);
+		return;
+	}
+	else if(root->GetRight() == nullptr) {
+		cnt_left += root->GetLeft()->GetNodeLeft() + root->GetLeft()->GetNodesRight() + 1;
+		sum_left += root->GetLeft()->GetSumLeft() + root->GetLeft()->GetSumRight();
+		sum_left += root->GetLeft()->GetKey();
+	}
+	else if(root->GetLeft() == nullptr) {
+		cnt_right += root->GetRight()->GetNodesLeft() + root->GetRight()->GetNodesRight() + 1;
+		sum_right += root->GetRight()->GetSumLeft() + root->GetRight()->GetSumRight();
+		sum_right += root->GetLeft()->GetKey();
+	}
+	else {
+		cnt_left += root->GetLeft()->GetNodeLeft() + root->GetLeft()->GetNodesRight() + 1;
+		sum_left += root->GetLeft()->GetSumLeft() + root->GetLeft()->GetSumRight();
+		sum_left += root->GetLeft()->GetKey();
+		cnt_right += root->GetRight()->GetNodesLeft() + root->GetRight()->GetNodesRight() + 1;
+		sum_right += root->GetRight()->GetSumLeft() + root->GetRight()->GetSumRight();
+		sum_right += root->GetLeft()->GetKey();
+	}
+	root->SetNodesLeft(cnt_left);
+	root->SetNodesRight(cnt_right);
+	root->SetSumLeft(sum_left);
+	root->SetSumRight(sum_right);
+}
+
+template<class Key, class Data>
+void RankTree<Key, Data>::UpdateTreeFromArrays(Key* key_array, int len_key, Data* data_array, int len_data) {
 	if (len_key != len_data)
 		return;
 	RankTreeNode<Key, Data>** arr = new RankTreeNode<Key, Data>*[len_key];
@@ -1116,6 +1195,21 @@ void RankTree<Key, Data>::UpdateTreeFromArrays(Key* key_array, int len_key,
 			delete arr[i];
 	}
 	delete arr;
+}
+
+template<class Key, class Data>
+void RankTree<Key, Data>::UpdateTreeFromPairArr(Pair<Key, Data>* arr, int len) {
+	if(len == 0 || arr == nullptr)
+		return;
+	RankTreeNode<Key, Data>** node_arr = new RankTreeNode<Key, Data>*[len];
+	for (int i = 0; i < len; i++) {
+		node_arr[i] = RankTreeNode<Key, Data>(arr[i].GetKey(), arr[i].GetValue());
+	}
+	RankTreeNode<Key, Data>** next_root = BalancedTreeFromArray(node_arr, 0, len - 1);
+	SetBalancedTreeHeight(next_root);
+	this->deleteTree(this->root);
+	this->root = next_root;
+	delete node_arr;
 }
 
 #endif /* RANK_TREE_H_ */
