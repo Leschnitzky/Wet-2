@@ -8,7 +8,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-int main() {
+/*int main() {
 	UF<string> test = UF<string>(5);
 	bool test_pass = true;
 	test.MakeSet("a", 0);
@@ -94,5 +94,5 @@ int main() {
 
 	return 0;
 
-}
+}*/
 
