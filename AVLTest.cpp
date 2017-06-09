@@ -1,0 +1,153 @@
+/*
+ * AVLTest.cpp
+ *
+ *  Created on: May 9, 2017
+ *      Author: amit
+ */
+
+#include <iostream>
+#include "rank_tree.h"
+#include "List.h"
+
+int main() {
+	List<int> keys_list;
+	List<std::string> data_list;
+
+	keys_list.PushBack(1);
+	keys_list.PushBack(6);
+	keys_list.PushBack(5);
+	keys_list.PushBack(4);
+	keys_list.PushBack(2);
+	keys_list.PushBack(3);
+	data_list.PushBack("str1");
+	data_list.PushBack("str6");
+	data_list.PushBack("str5");
+	data_list.PushBack("str4");
+	data_list.PushBack("str2");
+	data_list.PushBack("str3");
+
+	List<int>::Iterator keys_iter(keys_list, true);
+	List<std::string>::Iterator data_iter(data_list, true);
+
+	List<int> second_insert;
+	List<std::string> second_data;
+
+	second_insert.PushBack(7);
+	second_insert.PushBack(9);
+	second_insert.PushBack(11);
+	second_data.PushBack("str7");
+	second_data.PushBack("str9");
+	second_data.PushBack("str11");
+
+	RankTree<int, std::string> tree;
+
+	//Insertion testing:
+	try {
+		while(true) {
+			std::cout << "\n Inserting: Key = " << *keys_iter << "\tData = " << *data_iter << std::endl;
+			tree.insertToTree(*keys_iter, *data_iter);
+
+			std::cout << "Number of elements in tree: " << tree.size()<< "\n";
+			std::cout << "Printing inorder...\n";
+			tree.PrintInorder();
+			std::cout << "\n Printing preorder...\n";
+			tree.PrintPreorder();
+			keys_iter.Next();
+			data_iter.Next();
+		}
+	} catch(IteratorAtEnd& e) {
+		std::cout << "Printing inorder...\n";
+		tree.PrintInorder();
+		std::cout << "\n Printing preorder...\n";
+		tree.PrintPreorder();
+		std::cout << "\nFinished Insertion\n";
+	}
+
+	//Inserting existing key:
+	try {
+		tree.insertToTree(1, "str1");
+		std::cout << "\n BAD!!!!!!!! \n";
+	} catch(AlreadyInTree& e) {
+		std::cout << "Key already in tree." << "    GOOD" << std::endl;
+	}
+
+	//Finding existing key:
+	try {
+		std::cout << "Data of key 4 is " << tree.findInTree(4) << "    GOOD" << std::endl;
+	} catch (NotInTree& e) {
+		std::cout << "Key is not in tree." << "    BAD" << std::endl;
+	}
+
+	//Finding non-existing key: (Should throw exception)
+	try {
+		std::cout << "Data of key 69 is " << tree.findInTree(69) << "    BAD" << std::endl;
+	} catch (NotInTree& e) {
+		std::cout << "Key is not in tree." << "    GOOD" << std::endl;
+	}
+
+	//Removing root test:
+	try {
+		std::cout << "Removing Key=4 from tree (currently root)...\n";
+		tree.removeFromTree(4);
+		std::cout << "Printing inorder...\n";
+		tree.PrintInorder();
+		std::cout << "Printing preorder...\n";
+		tree.PrintPreorder();
+	} catch (...) {
+		std::cout << "Error removing root (not good)." << std::endl;
+	}
+
+	List<int>::Iterator second_keys(second_insert, true);
+	List<std::string>::Iterator data_second(second_data, true);
+
+	//Adding some more to make things more interesting...
+	try {
+		while(true) {
+			std::cout<< "Adding Key: "<< (*second_keys) << "\n";
+			tree.insertToTree(*second_keys, *data_second);
+			std::cout << "Number of keys now: " << tree.size() << std::endl;
+			std::cout << "Printing inorder...\n";
+			tree.PrintInorder();
+			std::cout << "Printing preorder...\n";
+			tree.PrintPreorder();
+			second_keys.Next(); data_second.Next();
+		}
+	} catch (IteratorAtEnd& e) {
+		std::cout << "Finished insertion 2.\n";
+	} catch (...) {
+		std::cout << "Error. NOT GOOD.\n";
+	}
+
+	//Creating removal order list:
+	List<int> removal_keys;
+	removal_keys.PushBack(5);
+	removal_keys.PushBack(2);
+	removal_keys.PushBack(7);
+	removal_keys.PushBack(3);
+	removal_keys.PushBack(9);
+	removal_keys.PushBack(1);
+	removal_keys.PushBack(11);
+	removal_keys.PushBack(6);
+	List<int>::Iterator remove_iter(removal_keys, true);
+
+	//Removing the nodes in the given order from the list:
+	try {
+		while(true) {
+			std::cout << "Removing from tree: " << *remove_iter << std::endl;
+			tree.removeFromTree(*remove_iter);
+			std::cout << "Number of keys now: " << tree.size() << std::endl;
+			std::cout << "Printing inorder...\n";
+			tree.PrintInorder();
+			std::cout << "Printing preorder...\n";
+			tree.PrintPreorder();
+			remove_iter.Next();
+		}
+	} catch(IteratorAtEnd& e) {
+		if(tree.size() == 0)
+			std::cout << "Finished removing tree.    GOOD";
+		else
+			std::cout << "Removing from tree NOT GOOD.";
+	} catch(...) {
+		std::cout << "Error removing from tree    NOT GOOD";
+	}
+}
