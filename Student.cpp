@@ -7,9 +7,8 @@
 
 #include "Student.h"
 
-Student::Student(int id, int grade, int power) {
+Student::Student(int id, int power) {
 	this->student_id = id;
-	this->grade      = grade;
 	this->power      = power;
 }
 
@@ -17,10 +16,6 @@ Student::~Student() { }
 
 int Student::GetID() {
 	return this->student_id;
-}
-
-int Student::GetGrade() {
-	return this->grade;
 }
 
 int Student::GetPower() {

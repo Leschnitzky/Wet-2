@@ -18,6 +18,7 @@ class Team {
 private:
 	int team_id;
 	int team_size;
+	int num_of_wins;
 	Pair<int, int> most_powerful;
 	RankTree<Student*, Student*> team_students;
 public:
@@ -42,9 +43,13 @@ public:
 
 	//Returns the most powerful student on the team.
 	int MostPowerfulInGroup();
-};
 
-class TeamExcep: public std::exception{};
-	class Failure: public TeamExcep{};
+	//Returns the amount of times the current team won against
+	//other teams.
+	int NumberOfWins();
+
+	//Increases the number of wins of the team by 1.
+	void IncWins();
+};
 
 #endif /* TEAM_H_ */

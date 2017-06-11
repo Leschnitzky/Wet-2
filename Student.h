@@ -15,21 +15,17 @@
 class Student {
 private:
 	int student_id;
-	int grade;
 	int power;
 public:
 
 	//Creates a new student with a given ID, grade, and power.
-	explicit Student(int id, int grade, int power);
+	explicit Student(int id, int power);
 
 	//Destroys the current student.
 	~Student();
 
 	//Returns the ID of the current student.
 	int GetID();
-
-	//Returns the grade of the student.
-	int GetGrade();
 
 	//Returns the student's power.
 	int GetPower();

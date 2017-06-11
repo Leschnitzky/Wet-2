@@ -239,6 +239,16 @@ public:
 		return this->SearchHashList(list, key);
 	}
 
+	Data At(int key) {
+		HashEntry* list = this->table_entries[this->HashFunc(key)];
+		while(list != nullptr) {
+			if(list->GetKey() == key)
+				return list->GetData();
+			list = list->GetNext();
+		}
+		throw KeyNotInTableException();
+	}
+
 	void Delete(int key) {
 		if(key < 0)
 			throw KeyNotInTableException();

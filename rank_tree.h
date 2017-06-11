@@ -139,9 +139,8 @@ public:
 	bool Exists(Key key);
 	void UpdateTreeFromArrays(Key* key_array, int len_key, Data* data_array,
 			int len_data);
-	//void RankTree<Key, Data>::UpdateTreeFromPairArr(Pair<Key, Data>* arr,
-		//	int len);
-	//void RankTree<Key, Data>::SetupTreeRanks(RankTreeNode<Key, Data>* root);
+	void UpdateTreeFromPairArr(Pair<Key, Data>* arr, int len);
+	void SetupTreeRanks(RankTreeNode<Key, Data>* root);
 	Key getBiggestKey();
 
 	// Test Functions/////
@@ -1122,7 +1121,7 @@ bool RankTree<Key, Data>::Exists(Key key) {
 	}
 }
 
-/*template<class Key, class Data>
+template<class Key, class Data>
 RankTreeNode<Key, Data>* BalancedTreeFromArray(RankTreeNode<Key, Data>** arr,
 		int start, int end) {
 	if (start > end)
@@ -1204,6 +1203,7 @@ void RankTree<Key, Data>::SetupTreeRanks(RankTreeNode<Key, Data>* root) {
 	root->SetSumRight(sum_right);
 }
 
+/*
 template<class Key, class Data>
 void RankTree<Key, Data>::UpdateTreeFromArrays(Key* key_array, int len_key,
 		Data* data_array, int len_data) {
@@ -1223,7 +1223,7 @@ void RankTree<Key, Data>::UpdateTreeFromArrays(Key* key_array, int len_key,
 			delete arr[i];
 	}
 	delete arr;
-}
+}*/
 
 template<class Key, class Data>
 void RankTree<Key, Data>::UpdateTreeFromPairArr(Pair<Key, Data>* arr, int len) {
@@ -1240,6 +1240,6 @@ void RankTree<Key, Data>::UpdateTreeFromPairArr(Pair<Key, Data>* arr, int len) {
 	this->deleteTree(this->root);
 	this->root = next_root;
 	delete node_arr;
-}*/
+}
 
 #endif /* RANK_TREE_H_ */

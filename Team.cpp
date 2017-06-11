@@ -11,8 +11,8 @@
 Team::Team(int id) {
 	this->team_id = id;
 	this->team_size = 0;
-	this->team_students();
 	this->most_powerful = Pair(0,0);
+	this->num_of_wins = 0;
 }
 
 Team::~Team() { }
@@ -26,16 +26,19 @@ int Team::GetID() {
 }
 
 void Team::AddStudent(Student* student) {
+	if(student == nullptr)
+		throw InvalidArg();
 	try{
 		this->team_students.insertToTree(student,student);
 	}
 	catch(AlreadyInTree& e){
-		throw Failure();
+		throw;
 	}
 
-	this->most_powerful = Pair(team_students.getBiggestKey()->GetID(),
-			team_students.getBiggestKey()->GetPower());
-	team_size++;
+	if((this->most_powerful.GetKey() == -1)
+	|| (this->most_powerful.GetValue() < student->GetPower()))
+		this->most_powerful = Pair(student->GetID(), student->GetPower());
+	this->team_size++;
 }
 
 void Team::RemoveStudent(Student* student) {
@@ -52,6 +55,14 @@ void Team::RemoveStudent(Student* student) {
 
 int Team::MostPowerfulInGroup() {
 	return this->most_powerful.GetKey();
+}
+
+int Team::NumberOfWins() {
+	return this->num_of_wins;
+}
+
+void Team::IncWins() {
+	this->num_of_wins++;
 }
 
 //void Team::UpdateMostPowerful() {

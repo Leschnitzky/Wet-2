@@ -13,15 +13,24 @@
 #include "KVPair.h"
 #include "union_find.h"
 #include "HashTable.h"
+#include <new>
+
+class Exception {};
+class InvalidArg : public Exception {};
+class AllocError : public Exception {};
+class StudentAlreadyExists : public Exception {};
+class StudentNotInSystem : public Exception {};
+class TeamHasNoLeader : public Exception {};
 
 /*
  * Class for describing the mutant school of the system.
  */
 class School {
 private:
+	HashTable<Student*> student_id_to_student;
 	HashTable<int> student_to_teamID;
-	UF<Team*> school_teams;
-	int number_of_teams;
+	UF<Team> school_teams;
+	int num_of_teams;
 
 public:
 	//Creates a new school instance, with N teams in it.
@@ -30,8 +39,16 @@ public:
 	//Destroys the given School instance.
 	~School();
 
+	int NumOfStudents();
+
+	int NumOfTeams();
+
 	//Adds a new student with a given ID and power to the
 	//specified team.
+	//THROW:
+	//InvalidArg
+	//StudentAlreadyExists
+	//AllocationError
 	void AddStudent(int student_id, int team_id, int power);
 
 	//Removes a student from the system, and from the team
@@ -54,14 +71,6 @@ public:
 
 	//Gets the ID of the leader that the given student is in.
 	int GetStudentTeamLeader(int student_id);
-};
-
-// Exceptions for the School class
-class SchoolExcep: public std::exception {
-};
-class InvalidInput: public SchoolExcep {
-};
-class Failure: public SchoolExcep {
 };
 
 #endif /* SCHOOL_H_ */
