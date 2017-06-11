@@ -39,3 +39,7 @@ bool Student::operator<(const Student& other) {
 bool Student::operator==(const Student& other) {
 	return this->student_id == other.student_id;
 }
+
+int Student::operator+(int power){
+	return this->power+power;
+}

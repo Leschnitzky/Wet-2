@@ -39,6 +39,9 @@ public:
 
 	//Checks if two students are equal by comparing hteir ID numbers.
 	bool operator==(const Student& other);
+
+	//Adds an int to a student (addition to power)
+	int operator+(int sum);
 };
 
 #endif /* STUDENT_H_ */

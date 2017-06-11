@@ -20,7 +20,8 @@
 class School {
 private:
 	HashTable<int> student_to_teamID;
-	UF<Team> school_teams;
+	UF<Team*> school_teams;
+	int number_of_teams;
 
 public:
 	//Creates a new school instance, with N teams in it.
@@ -53,6 +54,14 @@ public:
 
 	//Gets the ID of the leader that the given student is in.
 	int GetStudentTeamLeader(int student_id);
+};
+
+// Exceptions for the School class
+class SchoolExcep: public std::exception {
+};
+class InvalidInput: public SchoolExcep {
+};
+class Failure: public SchoolExcep {
 };
 
 #endif /* SCHOOL_H_ */

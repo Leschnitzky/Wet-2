@@ -139,9 +139,9 @@ public:
 	bool Exists(Key key);
 	void UpdateTreeFromArrays(Key* key_array, int len_key, Data* data_array,
 			int len_data);
-	void RankTree<Key, Data>::UpdateTreeFromPairArr(Pair<Key, Data>* arr,
-			int len);
-	void RankTree<Key, Data>::SetupTreeRanks(RankTreeNode<Key, Data>* root);
+	//void RankTree<Key, Data>::UpdateTreeFromPairArr(Pair<Key, Data>* arr,
+		//	int len);
+	//void RankTree<Key, Data>::SetupTreeRanks(RankTreeNode<Key, Data>* root);
 	Key getBiggestKey();
 
 	// Test Functions/////
@@ -703,8 +703,8 @@ void RankTree<Key, Data>::updateRank(RankTreeNode<Key, Data>* node) {
 							+ node->GetLeft()->GetNodesRight() + 1);
 			node->SetSumRight(0);
 			node->SetSumLeft(
-					(node->GetLeft()->GetSumLeft()
-							+ node->GetLeft()->GetSumRight()) + node->GetLeft()->GetKey());
+					( node->GetLeft()->GetKey() + node->GetLeft()->GetSumLeft()
+							+ node->GetLeft()->GetSumRight()));
 
 		} else {
 			node->SetNodesLeft(0);
@@ -713,8 +713,8 @@ void RankTree<Key, Data>::updateRank(RankTreeNode<Key, Data>* node) {
 							+ node->GetRight()->GetNodesRight() + 1);
 			node->SetSumLeft(0);
 			node->SetSumRight(
-					(node->GetRight()->GetSumLeft()
-								+ node->GetRight()->GetSumRight()) + node->GetRight()->GetKey());
+					(node->GetRight()->GetKey() + node->GetRight()->GetSumLeft()
+								+ node->GetRight()->GetSumRight()));
 
 		}
 	} else {
@@ -725,11 +725,11 @@ void RankTree<Key, Data>::updateRank(RankTreeNode<Key, Data>* node) {
 				node->GetRight()->GetNodesLeft()
 						+ node->GetRight()->GetNodesRight() + 1);
 		node->SetSumLeft(
-				(node->GetLeft()->GetSumLeft()
-						+ node->GetLeft()->GetSumRight()) + node->GetLeft()->GetKey());
+				( node->GetLeft()->GetKey() + node->GetLeft()->GetSumLeft()
+						+ node->GetLeft()->GetSumRight()));
 		node->SetSumRight(
-				(node->GetRight()->GetSumLeft()
-							+ node->GetRight()->GetSumRight()) + node->GetRight()->GetKey());
+				(node->GetRight()->GetKey() + node->GetRight()->GetSumLeft()
+							+ node->GetRight()->GetSumRight()));
 	}
 }
 
@@ -896,7 +896,7 @@ void RankTree<Key, Data>::shiftLL(RankTreeNode<Key, Data>* node,
 			return;
 		}
 	}
-	U(*it)->SetRight(temp);
+	(*it)->SetRight(temp);
 	route.RemoveLast();
 }
 
@@ -1122,8 +1122,8 @@ bool RankTree<Key, Data>::Exists(Key key) {
 	}
 }
 
-template<class Key, class Data>
-fRankTreeNode<Key, Data>* BalancedTreeFromArray(RankTreeNode<Key, Data>** arr,
+/*template<class Key, class Data>
+RankTreeNode<Key, Data>* BalancedTreeFromArray(RankTreeNode<Key, Data>** arr,
 		int start, int end) {
 	if (start > end)
 		return nullptr;
@@ -1240,6 +1240,6 @@ void RankTree<Key, Data>::UpdateTreeFromPairArr(Pair<Key, Data>* arr, int len) {
 	this->deleteTree(this->root);
 	this->root = next_root;
 	delete node_arr;
-}
+}*/
 
 #endif /* RANK_TREE_H_ */

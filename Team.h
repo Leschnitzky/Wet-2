@@ -43,4 +43,8 @@ public:
 	//Returns the most powerful student on the team.
 	int MostPowerfulInGroup();
 };
+
+class TeamExcep: public std::exception{};
+	class Failure: public TeamExcep{};
+
 #endif /* TEAM_H_ */

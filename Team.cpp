@@ -6,10 +6,13 @@
  */
 
 #include "Team.h"
+#include "rank_tree.h"
 
 Team::Team(int id) {
 	this->team_id = id;
 	this->team_size = 0;
+	this->team_students();
+	this->most_powerful = Pair(0,0);
 }
 
 Team::~Team() { }
@@ -23,11 +26,28 @@ int Team::GetID() {
 }
 
 void Team::AddStudent(Student* student) {
+	try{
+		this->team_students.insertToTree(student,student);
+	}
+	catch(AlreadyInTree& e){
+		throw Failure();
+	}
 
+	this->most_powerful = Pair(team_students.getBiggestKey()->GetID(),
+			team_students.getBiggestKey()->GetPower());
+	team_size++;
 }
 
 void Team::RemoveStudent(Student* student) {
-
+	try{
+		this->team_students.removeFromTree(student);
+	}
+	catch(NotInTree& e){
+		throw Failure();
+	}
+	this->most_powerful = Pair(team_students.getBiggestKey()->GetID(),
+	team_students.getBiggestKey()->GetPower());
+	team_size--;
 }
 
 int Team::MostPowerfulInGroup() {
