@@ -140,6 +140,7 @@ public:
 	void UpdateTreeFromArrays(Key* key_array, int len_key, Data* data_array,
 			int len_data);
 	void UpdateTreeFromPairArr(Pair<Key, Data>* arr, int len);
+	int CalcSumOfNumber(int num);
 	void SetupTreeRanks(RankTreeNode<Key, Data>* root);
 	Key getBiggestKey();
 
@@ -1157,6 +1158,32 @@ void SetBalancedTreeHeight(RankTreeNode<Key, Data>* root) {
 				root->SetHeight(root->GetRight()->GetHeight() + 1);
 		}
 	}
+}
+
+template<class Key,class Data>
+int RankTree<Key,Data>::CalcSumOfNumber(int num){
+	if(this->size() <= num){
+		return root->GetKey() + (root->GetSumLeft()+root->GetSumRight());
+	}
+	if(root==nullptr){
+		return 0;
+	}
+	RankTreeNode<Key,Data>* node = root;
+	int sum = 0;
+	int num_to_count=num;
+	while(num_to_count > 0){
+		if(node->GetNodesRight()>num_to_count){
+			sum += node->GetKey() + (node->GetSumRight());
+			num_to_count -= node->GetNodesRight() + 1;
+			node = node->GetLeft();
+		} else if(node->GetNodesRight() == num_to_count) {
+			sum += node->GetSumRight();
+			num_to_count -= node->GetNodesRight();
+		} else{
+			node = node->GetRight();
+		}
+	}
+	return sum;
 }
 
 template<class Key, class Data>

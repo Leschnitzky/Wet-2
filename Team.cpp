@@ -46,7 +46,7 @@ void Team::RemoveStudent(Student* student) {
 		this->team_students.removeFromTree(student);
 	}
 	catch(NotInTree& e){
-		throw Failure();
+		throw;
 	}
 	this->most_powerful = Pair(team_students.getBiggestKey()->GetID(),
 	team_students.getBiggestKey()->GetPower());
@@ -63,6 +63,10 @@ int Team::NumberOfWins() {
 
 void Team::IncWins() {
 	this->num_of_wins++;
+}
+
+int Team::GetSumOfPower(int k){
+	return this->team_students.CalcSumOfNumber(k);
 }
 
 //void Team::UpdateMostPowerful() {

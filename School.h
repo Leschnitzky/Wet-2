@@ -71,6 +71,7 @@ public:
 
 	//Gets the ID of the leader that the given student is in.
 	int GetStudentTeamLeader(int student_id);
+
 };
 
 #endif /* SCHOOL_H_ */

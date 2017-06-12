@@ -11,6 +11,9 @@
 #include "Student.h"
 #include "KVPair.h"
 
+
+class TeamExcep: public std::exception{};
+class InvalidArg: public TeamExcep{};
 /*
  * Class for  describing a team in the database of the school.
  */
@@ -50,6 +53,10 @@ public:
 
 	//Increases the number of wins of the team by 1.
 	void IncWins();
+
+	//Gets the sum of powers of the k most powerful students
+	//If the number of students is below k, gets the sum of power of all the students
+	int GetSumOfPower(int k);
 };
 
 #endif /* TEAM_H_ */
