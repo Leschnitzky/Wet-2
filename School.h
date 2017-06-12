@@ -32,6 +32,8 @@ private:
 	UF<Team> school_teams;
 	int num_of_teams;
 
+	Student** School::MergeStudsByPower(Student** arr1, int len1, Student** arr2, int len2);
+
 public:
 	//Creates a new school instance, with N teams in it.
 	School(int n);

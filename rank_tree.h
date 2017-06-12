@@ -143,7 +143,7 @@ public:
 	int CalcSumOfNumber(int num);
 	void SetupTreeRanks(RankTreeNode<Key, Data>* root);
 	Key getBiggestKey();
-
+	void DeleteEntireTree();
 	// Test Functions/////
 	bool testAllBFs(RankTreeNode<Key, Data>* node) {
 		if (!node) {
@@ -1123,6 +1123,13 @@ bool RankTree<Key, Data>::Exists(Key key) {
 }
 
 template<class Key, class Data>
+void RankTree<Key, Data>::DeleteEntireTree() {
+	this->deleteTree(this->root);
+	this->root = nullptr;
+	this->numOfNodes = 0;
+}
+
+template<class Key, class Data>
 RankTreeNode<Key, Data>* BalancedTreeFromArray(RankTreeNode<Key, Data>** arr,
 		int start, int end) {
 	if (start > end)
@@ -1256,7 +1263,7 @@ template<class Key, class Data>
 void RankTree<Key, Data>::UpdateTreeFromPairArr(Pair<Key, Data>* arr, int len) {
 	if (len == 0 || arr == nullptr)
 		return;
-	RankTreeNode<Key, Data>** node_arr = new RankTreeNode<Key, Data>*[len];
+	RankTreeNode<Key, Data>* node_arr = RankTreeNode<Key, Data>[len];
 	for (int i = 0; i < len; i++) {
 		node_arr[i] = RankTreeNode<Key, Data>(arr[i].GetKey(),
 				arr[i].GetValue());
@@ -1266,7 +1273,7 @@ void RankTree<Key, Data>::UpdateTreeFromPairArr(Pair<Key, Data>* arr, int len) {
 	SetBalancedTreeHeight(next_root);
 	this->deleteTree(this->root);
 	this->root = next_root;
-	delete node_arr;
+	delete[] node_arr;
 }
 
 #endif /* RANK_TREE_H_ */
