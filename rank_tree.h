@@ -1171,7 +1171,7 @@ int RankTree<Key,Data>::CalcSumOfNumber(int num){
 	RankTreeNode<Key,Data>* node = root;
 	int sum = 0;
 	int num_to_count=num;
-	while(num_to_count > 0){
+	while((num_to_count > 0)||(node == nullptr)){
 		if(node->GetNodesRight()>num_to_count){
 			sum += node->GetKey() + (node->GetSumRight());
 			num_to_count -= node->GetNodesRight() + 1;
