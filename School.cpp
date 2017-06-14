@@ -9,6 +9,7 @@
 
 School::School(int n) {
 	this->num_of_teams = n;
+	this->school_teams(n);
 	for (int i = 1; i <= n; i++) {
 		Team* team = new Team(i);
 		school_teams.MakeSet(*team, i);

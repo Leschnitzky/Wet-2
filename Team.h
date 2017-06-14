@@ -11,9 +11,10 @@
 #include "Student.h"
 #include "KVPair.h"
 
-
-class TeamExcep: public std::exception{};
-class InvalidArg: public TeamExcep{};
+class TeamExcep: public std::exception {
+};
+class InvalidArg: public TeamExcep {
+};
 /*
  * Class for  describing a team in the database of the school.
  */
