@@ -6,10 +6,10 @@
  */
 
 #include "School.h"
+#include "union_find.h"
 
-School::School(int n) {
+School::School(int n): school_teams(n) {
 	this->num_of_teams = n;
-	this->school_teams(n);
 	for (int i = 1; i <= n; i++) {
 		Team* team = new Team(i);
 		school_teams.MakeSet(*team, i);
@@ -17,8 +17,6 @@ School::School(int n) {
 }
 
 School::~School() {
-	delete this->school_teams;
-	delete this->student_to_teamID;
 
 }
 

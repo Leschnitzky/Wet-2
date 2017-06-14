@@ -15,12 +15,12 @@
 #include <new>
 #include "KVPair.h"
 
-class Exception {};
-class TableEmpty               : Exception {};
-class AlreadyInTableException  : Exception {};
-class KeyNotInTableException   : Exception {};
-class InvalidArg               : Exception {};
-class AllocationError          : Exception {};
+class ExceptionHT {};
+class TableEmpty               : ExceptionHT {};
+class AlreadyInTableException  : ExceptionHT {};
+class KeyNotInTableException   : ExceptionHT {};
+class InvalidArgu               : ExceptionHT {};
+class AllocationError          : ExceptionHT {};
 
 template<typename Data> class HashTable {
 private:
@@ -267,7 +267,7 @@ public:
 	//NOTE: Table does not revert back to original size.
 	Pair<int, Data>** FlushTable(int* size_out) {
 		if(size_out == nullptr)
-			throw InvalidArg();
+			throw InvalidArgu();
 		Pair<int, Data>** arr = nullptr;
 		try {
 			arr = new Pair<int, Data>*[this->item_count];

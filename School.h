@@ -15,12 +15,12 @@
 #include "HashTable.h"
 #include <new>
 
-class Exception {};
-class InvalidArg : public Exception {};
-class AllocError : public Exception {};
-class StudentAlreadyExists : public Exception {};
-class StudentNotInSystem : public Exception {};
-class TeamHasNoLeader : public Exception {};
+class ExceptionSchool {};
+class InvalidArg : public ExceptionSchool {};
+class AllocError : public ExceptionSchool {};
+class StudentAlreadyExists : public ExceptionSchool {};
+class StudentNotInSystem : public ExceptionSchool {};
+class TeamHasNoLeader : public ExceptionSchool {};
 
 /*
  * Class for describing the mutant school of the system.
@@ -32,7 +32,7 @@ private:
 	UF<Team> school_teams;
 	int num_of_teams;
 
-	Student** School::MergeStudsByPower(Student** arr1, int len1, Student** arr2, int len2);
+	Student** MergeStudsByPower(Student** arr1, int len1, Student** arr2, int len2);
 
 public:
 	//Creates a new school instance, with N teams in it.

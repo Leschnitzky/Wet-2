@@ -8,10 +8,9 @@
 #include "Team.h"
 #include "rank_tree.h"
 
-Team::Team(int id) {
+Team::Team(int id): most_powerful(0,0) {
 	this->team_id = id;
 	this->team_size = 0;
-	this->most_powerful = Pair(0,0);
 	this->num_of_wins = 0;
 }
 
@@ -27,7 +26,7 @@ int Team::GetID() {
 
 void Team::AddStudent(Student* student) {
 	if(student == nullptr)
-		throw InvalidArg();
+		throw InvalidArgs();
 	try{
 		this->team_students.insertToTree(student,student);
 	}
@@ -37,7 +36,7 @@ void Team::AddStudent(Student* student) {
 
 	if((this->most_powerful.GetKey() == -1)
 	|| (this->most_powerful.GetValue() < student->GetPower()))
-		this->most_powerful = Pair(student->GetID(), student->GetPower());
+		this->most_powerful = Pair<int,int>(student->GetID(), student->GetPower());
 	this->team_size++;
 }
 
@@ -49,7 +48,7 @@ void Team::RemoveStudent(Student* student) {
 		throw;
 	}
 	Student* next_most = this->team_students.getBiggestKey();
-	this->most_powerful = Pair(next_most->GetID(), next_most->GetPower());
+	this->most_powerful = Pair<int,int>(next_most->GetID(), next_most->GetPower());
 	team_size--;
 }
 
@@ -83,7 +82,7 @@ Student** Team::GetStudentArr(int* size) {
 	try {
 		output = this->team_students.GetTreeKeys();
 	} catch(std::bad_alloc& e) {
-		throw AllocationError();
+		throw;
 	}
 	*size = actual;
 	this->team_students.DeleteEntireTree();

@@ -6,7 +6,7 @@
  *      Author: leschnitzky
  */
 using namespace std;
-#include "School.h";
+#include "School.h"
 
 int main() {
 	bool test = true;

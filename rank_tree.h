@@ -236,8 +236,6 @@ public:
 		return array;
 	}
 	///// The rest of the tree functions//////
-
-	RankTree(const RankTree&) = delete;			//No copy constructor for tree
 };
 
 /*
@@ -703,7 +701,7 @@ void RankTree<Key, Data>::updateRank(RankTreeNode<Key, Data>* node) {
 							+ node->GetLeft()->GetNodesRight() + 1);
 			node->SetSumRight(0);
 			node->SetSumLeft(
-					( node->GetLeft()->GetKey() + node->GetLeft()->GetSumLeft()
+					( *(node->GetLeft()->GetKey()) + node->GetLeft()->GetSumLeft()
 							+ node->GetLeft()->GetSumRight()));
 
 		} else {
@@ -713,7 +711,7 @@ void RankTree<Key, Data>::updateRank(RankTreeNode<Key, Data>* node) {
 							+ node->GetRight()->GetNodesRight() + 1);
 			node->SetSumLeft(0);
 			node->SetSumRight(
-					(node->GetRight()->GetKey() + node->GetRight()->GetSumLeft()
+					(*(node->GetRight()->GetKey()) + node->GetRight()->GetSumLeft()
 								+ node->GetRight()->GetSumRight()));
 
 		}
@@ -725,10 +723,10 @@ void RankTree<Key, Data>::updateRank(RankTreeNode<Key, Data>* node) {
 				node->GetRight()->GetNodesLeft()
 						+ node->GetRight()->GetNodesRight() + 1);
 		node->SetSumLeft(
-				( node->GetLeft()->GetKey() + node->GetLeft()->GetSumLeft()
+				(*(node->GetLeft()->GetKey()) + node->GetLeft()->GetSumLeft()
 						+ node->GetLeft()->GetSumRight()));
 		node->SetSumRight(
-				(node->GetRight()->GetKey() + node->GetRight()->GetSumLeft()
+				(*(node->GetRight()->GetKey()) + node->GetRight()->GetSumLeft()
 							+ node->GetRight()->GetSumRight()));
 	}
 }
@@ -1170,7 +1168,7 @@ void SetBalancedTreeHeight(RankTreeNode<Key, Data>* root) {
 template<class Key,class Data>
 int RankTree<Key,Data>::CalcSumOfNumber(int num){
 	if(this->size() <= num){
-		return root->GetKey() + (root->GetSumLeft()+root->GetSumRight());
+		return *(root->GetKey()) + (root->GetSumLeft()+root->GetSumRight());
 	}
 	if(root==nullptr){
 		return 0;
@@ -1263,7 +1261,7 @@ template<class Key, class Data>
 void RankTree<Key, Data>::UpdateTreeFromPairArr(Pair<Key, Data>* arr, int len) {
 	if (len == 0 || arr == nullptr)
 		return;
-	RankTreeNode<Key, Data>* node_arr = RankTreeNode<Key, Data>[len];
+	RankTreeNode<Key, Data>* node_arr[len];
 	for (int i = 0; i < len; i++) {
 		node_arr[i] = RankTreeNode<Key, Data>(arr[i].GetKey(),
 				arr[i].GetValue());

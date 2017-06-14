@@ -96,10 +96,6 @@ int main() {
 	} catch (...) {
 		std::cout << "Error removing root (not good)." << std::endl;
 	}
-	node->SetSumLeft(
-			( node->GetLeft()->GetKey() + node->GetLeft()->GetSumLeft()
-					+ node->GetLeft()->GetSumRight()));
-
 	List<int>::Iterator second_keys(second_insert, true);
 	List<std::string>::Iterator data_second(second_data, true);
 

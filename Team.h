@@ -10,10 +10,11 @@
 
 #include "Student.h"
 #include "KVPair.h"
+#include "rank_tree.h"
 
-class TeamExcep: public std::exception {
+class TeamExcep{
 };
-class InvalidArg: public TeamExcep {
+class InvalidArgs: public TeamExcep {
 };
 /*
  * Class for  describing a team in the database of the school.
@@ -25,7 +26,8 @@ private:
 	int num_of_wins;
 	Pair<int, int> most_powerful;
 	RankTree<Student*, Student*> team_students;
-	Student** MergeStudsByPower(Student** arr1, int len1, Student** arr2, int len2);
+	Student** MergeStudsByPower(Student** arr1, int len1, Student** arr2,
+			int len2);
 public:
 
 	//Creates a new empty team.
