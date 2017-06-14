@@ -25,6 +25,7 @@ private:
 	int num_of_wins;
 	Pair<int, int> most_powerful;
 	RankTree<Student*, Student*> team_students;
+	Student** MergeStudsByPower(Student** arr1, int len1, Student** arr2, int len2);
 public:
 
 	//Creates a new empty team.
@@ -58,6 +59,20 @@ public:
 	//Gets the sum of powers of the k most powerful students
 	//If the number of students is below k, gets the sum of power of all the students
 	int GetSumOfPower(int k);
+
+	//Sets the number of wins for the team, as long as it's
+	//more than the  current number.
+	void SetWins(int wins);
+
+	//Returns an array of of all students in the current team,
+	//and puts the size of the array.
+	//NOTE: This function also flushes all students from the team,
+	//so it will only be used in UF.
+	Student** GetStudentArr(int* size);
+
+	//Takes an array (assuming there are no students in the team)
+	//and builds it from the given array.
+	bool BuildTeamFromArray(Student** arr, int size);
 };
 
 #endif /* TEAM_H_ */

@@ -53,7 +53,32 @@ void School::RemoveStudent(int student_id) {
 }
 
 void School::JoinTeams(int team1, int team2) {
+	if((team1 <= 0) || (team2 <= 0)
+	|| (team1 > this->num_of_teams) || (team2 > this->num_of_teams))
+		throw InvalidArg();
 
+	Team* team_1 = this->school_teams.Find(team1);
+	Team* team_2 = this->school_teams.Find(team2);
+	int size1 = 0, size2 = 0;
+
+	Student** arr1 = team_1->GetStudentArr(&size1);
+	Student** arr2 = team_2->GetStudentArr(&size2);
+
+	Student** merged = this->MergeStudsByPower(arr1, size1, arr2, size2);
+	int next_size = size1 + size2;
+	int team1_wins = team_1->NumberOfWins();
+	int team2_wins = team_2->NumberOfWins();
+
+	this->school_teams.Union(team1, team2);
+
+	if(size1 > size2) { //Then merge to team1
+		team_1->BuildTeamFromArray(merged, next_size);
+		team_1->SetWins(team1_wins + team2_wins);
+	}
+	else {
+		team_2->BuildTeamFromArray(merged, next_size);
+		team_2->SetWins(team1_wins + team2_wins);
+	}
 }
 
 void School::TeamFight(int team1, int team2, int num_of_fighters) {
@@ -94,4 +119,20 @@ int School::GetStudentTeamLeader(int student_id) {
 	if (leader_id == -1)
 		throw TeamHasNoLeader();
 	return leader_id;
+}
+
+Student** School::MergeStudsByPower(Student** arr1, int len1, Student** arr2, int len2) {
+	Student** res = Student[len1 + len2];
+	int i1 = 0, i2 = 0, i3 = 0;
+	while(i1 != len1 && i2 != len2) {
+		if(arr1[i1]->GetPower() > arr2[i2]->GetPower())
+			res[i3++] = arr1[i1++];
+		else
+			res[i3++] = arr2[i2++];
+	}
+	while(i1 < len1)
+		res[i3++] = arr1[i1++];
+	while(i2 < len2)
+		res[i3++] = arr2[i2++];
+	return res;
 }
