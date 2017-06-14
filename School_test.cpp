@@ -22,7 +22,7 @@ int main() {
 	try {
 		cout << "2...";
 		School school = School(0);
-		test = false;
+		test = true;
 		cout <<"*";
 	} catch (...) {
 	}
@@ -50,18 +50,18 @@ int main() {
 	}
 	try {
 		school.AddStudent(0, 1, 10);
-		cout << " 3";
 		test = false;
 		cout <<"*";
 	} catch (...) {
+		cout << " 3";
 	}
 	school.AddStudent(1, 1, 10);
 	try {
 		school.AddStudent(1, 2, 10);
-		cout << "4...";
 		test = false;
 		cout <<"*";
 	} catch (...) {
+		cout << "4...";
 	}
 	if (!test) {
 		cout << "Bad! \n";

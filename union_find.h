@@ -46,19 +46,19 @@ public:
 		for (int i = 0; i < array_size; i++) {
 			delete element_data[i];
 		}
-		delete element_data;
-		delete size;
-		delete parent;
+		delete[] element_data;
+		delete[] size;
+		delete[] parent;
 	}
 	void MakeSet(SetElement elm, int i) {
 		if ((i > array_size) || (i < 0)) {
 			throw Invalid_Index();
 		}
-		if (element_data[i] != nullptr) {
+		if (element_data[i-1] != nullptr) {
 			throw Not_Empty();
 		}
-		element_data[i] = new SetElement(elm);
-		size[i] = 1;
+		element_data[i-1] = new SetElement(elm);
+		size[i-1] = 1;
 	}
 	SetElement* Find(int i) {
 		if ((i > array_size) || (i < 0)) {

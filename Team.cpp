@@ -94,7 +94,7 @@ bool Team::BuildTeamFromArray(Student** arr, int size) {
 		return false;
 	Pair<Student*, Student*>* update_arr = new Pair<Student*, Student*>[size];
 	for(int i = 0; i < size; i++) {
-		update_arr[i] = Pair<Student*, Student*>(arr, arr);
+		update_arr[i] = Pair<Student*, Student*>(arr[i], arr[i]);
 	}
 	this->team_students.UpdateTreeFromPairArr(update_arr, size);
 	delete[] update_arr;

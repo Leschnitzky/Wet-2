@@ -38,6 +38,8 @@ public:
 
 	//Adds an int to a student (addition to power)
 	int operator+(int sum);
+
+	operator int() const;
 };
 
 #endif /* STUDENT_H_ */

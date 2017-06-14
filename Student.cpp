@@ -38,3 +38,7 @@ bool Student::operator==(const Student& other) {
 int Student::operator+(int power){
 	return this->power+power;
 }
+
+Student::operator int() const {
+	return this->power;
+}

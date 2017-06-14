@@ -17,6 +17,7 @@ private:
 	Key key;
 	Value value;
 public:
+	explicit Pair() { }
 	Pair(Key key, Value value) : key(key), value(value) { }
 	~Pair() { }
 	Key GetKey() { return this->key; }

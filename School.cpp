@@ -8,7 +8,9 @@
 #include "School.h"
 #include "union_find.h"
 
-School::School(int n): school_teams(n) {
+School::School(int n) : school_teams(n) {
+	if(n <= 0)
+		this->num_of_teams = 0;
 	this->num_of_teams = n;
 	for (int i = 1; i <= n; i++) {
 		Team* team = new Team(i);
@@ -18,6 +20,14 @@ School::School(int n): school_teams(n) {
 
 School::~School() {
 
+}
+
+int School::NumOfStudents() {
+	return this->student_id_to_student.Size();
+}
+
+int School::NumOfTeams() {
+	return this->num_of_teams;
 }
 
 void School::AddStudent(int student_id, int team_id, int power) {
@@ -120,7 +130,7 @@ int School::GetStudentTeamLeader(int student_id) {
 }
 
 Student** School::MergeStudsByPower(Student** arr1, int len1, Student** arr2, int len2) {
-	Student** res = Student[len1 + len2];
+	Student** res = new Student*[len1 + len2];
 	int i1 = 0, i2 = 0, i3 = 0;
 	while(i1 != len1 && i2 != len2) {
 		if(arr1[i1]->GetPower() > arr2[i2]->GetPower())

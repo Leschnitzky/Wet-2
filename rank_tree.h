@@ -1176,9 +1176,9 @@ int RankTree<Key,Data>::CalcSumOfNumber(int num){
 	RankTreeNode<Key,Data>* node = root;
 	int sum = 0;
 	int num_to_count=num;
-	while((num_to_count > 0)||(node == nullptr)){
+	while((num_to_count > 0)||(node != nullptr)){
 		if(node->GetNodesRight()>num_to_count){
-			sum += node->GetKey() + (node->GetSumRight());
+			sum += *node->GetKey() + (node->GetSumRight());
 			num_to_count -= node->GetNodesRight() + 1;
 			node = node->GetLeft();
 		} else if(node->GetNodesRight() == num_to_count) {
@@ -1235,6 +1235,25 @@ void RankTree<Key, Data>::SetupTreeRanks(RankTreeNode<Key, Data>* root) {
 	root->SetSumRight(sum_right);
 }
 
+template<class Key, class Data>
+void RankTree<Key, Data>::UpdateTreeFromPairArr(Pair<Key, Data>* arr, int len) {
+	if (len == 0 || arr == nullptr)
+		return;
+	RankTreeNode<Key, Data>** node_arr = new RankTreeNode<Key, Data>*[len];
+	for (int i = 0; i < len; i++) {
+		node_arr[i] = new RankTreeNode<Key, Data>(arr[i].GetKey(),
+				arr[i].GetValue());
+	}
+	RankTreeNode<Key, Data>* next_root = BalancedTreeFromArray(node_arr, 0,
+			len - 1);
+	SetBalancedTreeHeight(next_root);
+	for(int i = 0; i < len; i++)
+		delete node_arr[i];
+	this->deleteTree(this->root);
+	this->root = next_root;
+	delete[] node_arr;
+}
+
 /*
 template<class Key, class Data>
 void RankTree<Key, Data>::UpdateTreeFromArrays(Key* key_array, int len_key,
@@ -1256,22 +1275,5 @@ void RankTree<Key, Data>::UpdateTreeFromArrays(Key* key_array, int len_key,
 	}
 	delete arr;
 }*/
-
-template<class Key, class Data>
-void RankTree<Key, Data>::UpdateTreeFromPairArr(Pair<Key, Data>* arr, int len) {
-	if (len == 0 || arr == nullptr)
-		return;
-	RankTreeNode<Key, Data>* node_arr[len];
-	for (int i = 0; i < len; i++) {
-		node_arr[i] = RankTreeNode<Key, Data>(arr[i].GetKey(),
-				arr[i].GetValue());
-	}
-	RankTreeNode<Key, Data>** next_root = BalancedTreeFromArray(node_arr, 0,
-			len - 1);
-	SetBalancedTreeHeight(next_root);
-	this->deleteTree(this->root);
-	this->root = next_root;
-	delete[] node_arr;
-}
 
 #endif /* RANK_TREE_H_ */
