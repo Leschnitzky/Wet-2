@@ -49,10 +49,13 @@ void School::AddStudent(int student_id, int team_id, int power) {
 }
 
 void School::RemoveStudent(int student_id) {
-	if (student_id <= 0)
+	if (student_id <= 0) {
 		throw InvalidArg();
-	if (this->student_id_to_student.Find(student_id) == false)
-		throw StudentNotInSystem();
+	}
+	bool check = (this->student_id_to_student.Find(student_id) == false);
+	if (check) {
+		throw 1;
+	}
 	Student* student_full = this->student_id_to_student.At(student_id);
 	this->student_id_to_student.Delete(student_id);
 	int prev_team = this->student_to_teamID.At(student_id);
@@ -67,6 +70,8 @@ void School::JoinTeams(int team1, int team2) {
 
 	Team* team_1 = this->school_teams.Find(team1);
 	Team* team_2 = this->school_teams.Find(team2);
+	if(team_1->GetID() == team_2->GetID())
+		return;
 	int size1 = 0, size2 = 0;
 
 	Student** arr1 = team_1->GetStudentArr(&size1);

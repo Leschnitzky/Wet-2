@@ -23,7 +23,7 @@ int main() {
 		cout << "2...";
 		School school = School(0);
 		test = true;
-		cout <<"*";
+		//cout <<"*";
 	} catch (...) {
 	}
 	if (!test) {
@@ -88,8 +88,9 @@ int main() {
 		cout <<"*";
 	} catch (...) {
 	}
-	school.RemoveStudent(2);
+
 	try {
+		school.RemoveStudent(2);
 		cout << " 3";
 		school.RemoveStudent(2);
 		test = false;
@@ -97,7 +98,7 @@ int main() {
 	} catch (...) {
 	}
 	school.RemoveStudent(4);
-	cout << "4...";
+	cout << " 4...";
 	if (school.NumOfStudents() != 3) {
 		test = false;
 		cout <<"*";
@@ -109,37 +110,37 @@ int main() {
 	cout << "Good! \n";
 	cout << "Checking join teams... \n";
 	try {
-		school.JoinTeams(0, 3);
 		cout << "1";
+		school.JoinTeams(0, 3);
 		test = false;
 		cout <<"*";
 	} catch (...) {
 	}
 	try {
-		school.JoinTeams(2, -3);
 		cout << " 2";
+		school.JoinTeams(2, -3);
 		test = false;
 		cout <<"*";
 	} catch (...) {
 	}
 	try {
-		school.JoinTeams(2, 6);
 		cout << " 3";
+		school.JoinTeams(2, 6);
 		test = false;
 		cout <<"*";
 	} catch (...) {
 	}
 	try {
-		school.JoinTeams(3, 3);
 		cout << " 4";
+		school.JoinTeams(3, 3);
 	} catch (...) {
 		test = false;
 		cout <<"*";
 	}
 	school.JoinTeams(1, 2);
 	try {
-		school.JoinTeams(2, 1);
 		cout << " 5";
+		school.JoinTeams(2, 1);
 	} catch (...) {
 		test = false;
 		cout <<"*";

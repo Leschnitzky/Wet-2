@@ -47,9 +47,13 @@ void Team::RemoveStudent(Student* student) {
 	catch(NotInTree& e){
 		throw;
 	}
+	this->team_size--;
+	if(this->team_size == 0) {
+		this->most_powerful = Pair<int, int>(0, 0);
+		return;
+	}
 	Student* next_most = this->team_students.getBiggestKey();
 	this->most_powerful = Pair<int,int>(next_most->GetID(), next_most->GetPower());
-	team_size--;
 }
 
 int Team::MostPowerfulInGroup() {

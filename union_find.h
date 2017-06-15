@@ -64,10 +64,10 @@ public:
 		if ((i > array_size) || (i < 0)) {
 			throw Invalid_Index();
 		}
-		int index = i;
+		int index = i-1;
 		List<int> indices;
 
-		indices.PushBack(i);
+		indices.PushBack(i-1);
 		while (parent[index] != -1) {
 			index = parent[index];
 			indices.PushBack(index);
