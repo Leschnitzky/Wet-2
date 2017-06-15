@@ -255,7 +255,5 @@ int main() {
 	}
 	cout <<"Good!\n";
 	cout <<"All tests have been passed for school!\n";
-
-
 }
 
