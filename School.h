@@ -15,7 +15,7 @@
 #include "HashTable.h"
 #include <new>
 
-class ExceptionSchool {};
+class ExceptionSchool : std::exception {};
 class InvalidArg : public ExceptionSchool {};
 class AllocError : public ExceptionSchool {};
 class StudentAlreadyExists : public ExceptionSchool {};

@@ -206,7 +206,8 @@ private:
 		delete to_delete;
 	}
 public:
-	HashTable() : max_list_length(0), downsize_enable(false) {
+	HashTable() : max_list_length(0) {
+		this->downsize_enable = false;
 		this->current_table_size = this->START_SIZE;
 		this->item_count = 0;
 		this->table_entries = new HashEntry*[START_SIZE];
