@@ -152,7 +152,7 @@ int main() {
 	}
 	if (!test) {
 		cout << "Bad!\n";
-		return 0;
+		//return 0;
 	}
 	cout <<"Good! \n";
 	cout <<"Checking team fight... \n";
@@ -164,6 +164,7 @@ int main() {
 		test = false;
 		cout <<"*";
 	} catch (...) {
+		std::cout<<"pass1\n";
 	}
 	try {
 		school.TeamFight(3,-2,3);
@@ -171,6 +172,7 @@ int main() {
 		test = false;
 		cout <<"*";
 	} catch (...) {
+		std::cout<<"pass2\n";
 	}
 	try {
 		school.TeamFight(1,3,-1);
@@ -178,10 +180,13 @@ int main() {
 		test = false;
 		cout <<"*";
 	} catch (...) {
+		std::cout<<"pass3\n";
 	}
 	cout <<" 4";
 	school.TeamFight(1,3,4);
+	std::cout<<"pass4\n";
 	school.TeamFight(2,3,4);
+	std::cout<<"pass5\n";
 	if(school.GetNumOfWins(3)!=0){
 		test = false;
 		cout <<"*";

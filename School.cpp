@@ -59,6 +59,7 @@ void School::RemoveStudent(int student_id) {
 	Student* student_full = this->student_id_to_student.At(student_id);
 	this->student_id_to_student.Delete(student_id);
 	int prev_team = this->student_to_teamID.At(student_id);
+	this->student_to_teamID.Delete(student_id);
 	Team* student_old_team = this->school_teams.Find(prev_team);
 	student_old_team->RemoveStudent(student_full);
 }
