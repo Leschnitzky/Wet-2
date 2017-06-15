@@ -93,13 +93,13 @@ public:
 		if (p == q) {
 			return;
 		}
-		if (size[p] > size[q]) {
-			size[p] += size[q];
-			size[q] = 0;
-			parent[q] = p;
+		if (size[p-1] > size[q-1]) {
+			size[p-1] += size[q-1];
+			size[q-1] = 0;
+			parent[q-1] = p-1;
 		}
-		size[q] += size[p];
-		parent[p] = q;
+		size[q-1] += size[p-1];
+		parent[p-1] = q-1;
 		size[p] = 0;
 	}
 };

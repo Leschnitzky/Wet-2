@@ -1167,11 +1167,11 @@ void SetBalancedTreeHeight(RankTreeNode<Key, Data>* root) {
 
 template<class Key,class Data>
 int RankTree<Key,Data>::CalcSumOfNumber(int num){
-	if(this->size() <= num){
-		return *(root->GetKey()) + (root->GetSumLeft()+root->GetSumRight());
-	}
 	if(root==nullptr){
 		return 0;
+	}
+	if(this->size() <= num){
+		return *(root->GetKey()) + (root->GetSumLeft()+root->GetSumRight());
 	}
 	RankTreeNode<Key,Data>* node = root;
 	int sum = 0;

@@ -34,7 +34,7 @@ void Team::AddStudent(Student* student) {
 		throw;
 	}
 
-	if((this->most_powerful.GetKey() == -1)
+	if((this->most_powerful.GetKey() == 0)
 	|| (this->most_powerful.GetValue() < student->GetPower()))
 		this->most_powerful = Pair<int,int>(student->GetID(), student->GetPower());
 	this->team_size++;
