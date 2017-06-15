@@ -36,6 +36,8 @@ private:
 	//The size of the table at a given moment.
 	int current_table_size;
 
+	bool downsize_enable;
+
 	class HashEntry {
 	private:
 		//Current HashEntry's key.
@@ -93,14 +95,18 @@ private:
 	//Function to resize the hash-table. This function is called on every add,
 	//But does not necessarily need to do anything if there weren't enough
 	//collisions in the table.
-	void ResizeHash() {
-		if(this->max_list_length <= 10)
-			return; //If expand was called, but not needed.
+	void ResizeHash(bool upsize) {
 		int size = 0;
 		this->max_list_length = 0;
 		Pair<int, Data>** flushed_arr = this->FlushTable(&size);
 		try {
-			int next_size = this->current_table_size * this->RESIZE_FACTOR;
+			int next_size = 0;
+			if(upsize) {
+				next_size = this->current_table_size * this->RESIZE_FACTOR;
+			}
+			else {
+				next_size = this->current_table_size / this->RESIZE_FACTOR;
+			}
 			HashEntry** resized = new HashEntry*[next_size]; //Allocate a new array
 			ResetHashArray(resized, next_size);
 			HashEntry** prev = this->table_entries;                          //Keep the previous array for deletion.
@@ -200,7 +206,7 @@ private:
 		delete to_delete;
 	}
 public:
-	HashTable() : max_list_length(0) {
+	HashTable() : max_list_length(0), downsize_enable(false) {
 		this->current_table_size = this->START_SIZE;
 		this->item_count = 0;
 		this->table_entries = new HashEntry*[START_SIZE];
@@ -227,11 +233,10 @@ public:
 		} catch(AlreadyInTableException& e) {
 			throw;
 		}
-		try {
-			this->ResizeHash();
-		} catch(std::bad_alloc& e) {
-			throw AllocationError();
-		}
+		if(this->max_list_length >= 3)
+			this->ResizeHash(true);
+		if(this->item_count >= (0.3 * this->current_table_size))
+			this->downsize_enable = true;
 	}
 
 	bool Find(int key) {
@@ -258,7 +263,8 @@ public:
 		} catch(KeyNotInTableException& e) {
 			throw;
 		}
-		//No need to resize Hash on delete.
+		if((this->item_count <= 0.3 * this->current_table_size) && this->downsize_enable)
+			this->ResizeHash(false);
 	}
 
 	//Flushs all keys aand data from the table into an array of pairs,
