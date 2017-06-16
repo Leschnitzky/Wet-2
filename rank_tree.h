@@ -1171,7 +1171,7 @@ int RankTree<Key,Data>::CalcSumOfNumber(int num){
 		return 0;
 	}
 	if(this->size() <= num){
-		return *(root->GetKey()) + (root->GetSumLeft()+root->GetSumRight());
+		return (*root->GetKey()) + (root->GetSumLeft()+root->GetSumRight());
 	}
 	RankTreeNode<Key,Data>* node = root;
 	int sum = 0;
@@ -1206,28 +1206,28 @@ void RankTree<Key, Data>::SetupTreeRanks(RankTreeNode<Key, Data>* root) {
 		root->SetSumRight(0);
 		return;
 	} else if (root->GetRight() == nullptr) {
-		cnt_left += root->GetLeft()->GetNodeLeft()
+		cnt_left += root->GetLeft()->GetNodesLeft()
 				+ root->GetLeft()->GetNodesRight() + 1;
 		sum_left += root->GetLeft()->GetSumLeft()
 				+ root->GetLeft()->GetSumRight();
-		sum_left += root->GetLeft()->GetKey();
+		sum_left += *(root->GetLeft()->GetKey());
 	} else if (root->GetLeft() == nullptr) {
 		cnt_right += root->GetRight()->GetNodesLeft()
 				+ root->GetRight()->GetNodesRight() + 1;
 		sum_right += root->GetRight()->GetSumLeft()
 				+ root->GetRight()->GetSumRight();
-		sum_right += root->GetLeft()->GetKey();
+		sum_right += *(root->GetRight()->GetKey());
 	} else {
-		cnt_left += root->GetLeft()->GetNodeLeft()
+		cnt_left += root->GetLeft()->GetNodesLeft()
 				+ root->GetLeft()->GetNodesRight() + 1;
 		sum_left += root->GetLeft()->GetSumLeft()
 				+ root->GetLeft()->GetSumRight();
-		sum_left += root->GetLeft()->GetKey();
+		sum_left += *(root->GetLeft()->GetKey());
 		cnt_right += root->GetRight()->GetNodesLeft()
 				+ root->GetRight()->GetNodesRight() + 1;
 		sum_right += root->GetRight()->GetSumLeft()
 				+ root->GetRight()->GetSumRight();
-		sum_right += root->GetLeft()->GetKey();
+		sum_right += *(root->GetRight()->GetKey());
 	}
 	root->SetNodesLeft(cnt_left);
 	root->SetNodesRight(cnt_right);
@@ -1247,6 +1247,7 @@ void RankTree<Key, Data>::UpdateTreeFromPairArr(Pair<Key, Data>* arr, int len) {
 	RankTreeNode<Key, Data>* next_root = BalancedTreeFromArray(node_arr, 0,
 			len - 1);
 	SetBalancedTreeHeight(next_root);
+	SetupTreeRanks(next_root);
 	for(int i = 0; i < len; i++)
 		delete node_arr[i];
 	this->deleteTree(this->root);

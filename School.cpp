@@ -54,7 +54,7 @@ void School::RemoveStudent(int student_id) {
 	}
 	bool check = (this->student_id_to_student.Find(student_id) == false);
 	if (check) {
-		throw 1;
+		throw StudentNotInSystem();
 	}
 	Student* student_full = this->student_id_to_student.At(student_id);
 	this->student_id_to_student.Delete(student_id);
@@ -101,8 +101,8 @@ void School::JoinTeams(int team1, int team2) {
 }
 
 void School::TeamFight(int team1, int team2, int num_of_fighters) {
-	if ((team1 <= 0) || (team2 <= 0) || (team1 >= num_of_teams)
-			|| (team2 >= num_of_teams) || (num_of_fighters < 0)) {
+	if ((team1 <= 0) || (team2 <= 0) || (team1 > num_of_teams)
+			|| (team2 > num_of_teams) || (num_of_fighters < 0)) {
 		throw InvalidArg();
 	}
 	Team* team_1 = school_teams.Find(team1);
@@ -144,7 +144,7 @@ Student** School::MergeStudsByPower(Student** arr1, int len1, Student** arr2, in
 	Student** res = new Student*[len1 + len2];
 	int i1 = 0, i2 = 0, i3 = 0;
 	while(i1 != len1 && i2 != len2) {
-		if(arr1[i1]->GetPower() > arr2[i2]->GetPower())
+		if(arr1[i1]->GetPower() < arr2[i2]->GetPower())
 			res[i3++] = arr1[i1++];
 		else
 			res[i3++] = arr2[i2++];

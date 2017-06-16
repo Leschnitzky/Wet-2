@@ -34,9 +34,14 @@ void Team::AddStudent(Student* student) {
 		throw;
 	}
 
+	//If currently empty OR new power is greater
 	if((this->most_powerful.GetKey() == 0)
 	|| (this->most_powerful.GetValue() < student->GetPower()))
 		this->most_powerful = Pair<int,int>(student->GetID(), student->GetPower());
+	//If new power is greater and new ID is smaller
+	if(this->most_powerful.GetValue() == student->GetPower())
+		if(this->most_powerful.GetKey() > student->GetID())
+			this->most_powerful = Pair<int, int>(student->GetID(), student->GetPower());
 	this->team_size++;
 }
 
