@@ -9,10 +9,11 @@
 
 Student::Student(int id, int power) {
 	this->student_id = id;
-	this->power      = power;
+	this->power = power;
 }
 
-Student::~Student() { }
+Student::~Student() {
+}
 
 int Student::GetID() {
 	return this->student_id;
@@ -23,20 +24,25 @@ int Student::GetPower() {
 }
 
 bool Student::operator<(const Student& other) {
-	if(this->power < other.power)
+	if (this->power < other.power)
 		return true;
-	else if(this->power == other.power && this->student_id < other.student_id)
-		return false;
-	else
+	else if (this->power == other.power) {
+		if (this->student_id >= other.student_id) {
+			return true;
+		} else {
+			return false;
+		}
+	} else
 		return true;
 }
+
 
 bool Student::operator==(const Student& other) {
 	return this->student_id == other.student_id;
 }
 
-int Student::operator+(int power){
-	return this->power+power;
+int Student::operator+(int power) {
+	return this->power + power;
 }
 
 Student::operator int() const {

@@ -101,6 +101,7 @@ bool Team::BuildTeamFromArray(Student** arr, int size) {
 		update_arr[i] = Pair<Student*, Student*>(arr[i], arr[i]);
 	}
 	this->team_students.UpdateTreeFromPairArr(update_arr, size);
+	this->team_size=size;
 	delete[] update_arr;
 	return true;
 }

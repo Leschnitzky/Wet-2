@@ -86,14 +86,18 @@ void School::JoinTeams(int team1, int team2) {
 	this->school_teams.Union(team1, team2);
 	this->num_of_teams--;
 
-	if(size1 > size2) { //Then merge to team1
+	Team* root = this->school_teams.Find(team1);
+	root->BuildTeamFromArray(merged, next_size);
+	root->SetWins(team1_wins + team2_wins);
+
+/*	if(size1 > size2) { //Then merge to team1
 		team_1->BuildTeamFromArray(merged, next_size);
 		team_1->SetWins(team1_wins + team2_wins);
 	}
 	else {
 		team_2->BuildTeamFromArray(merged, next_size);
 		team_2->SetWins(team1_wins + team2_wins);
-	}
+	}*/
 }
 
 void School::TeamFight(int team1, int team2, int num_of_fighters) {

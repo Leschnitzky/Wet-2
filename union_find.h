@@ -75,7 +75,7 @@ public:
 		indices.RemoveLast();
 		typename List<int>::Iterator it(indices, false);
 		while (indices.Size() != 0) {
-			parent[*it] = i;
+			parent[*it] = index;
 			size[*it] = 0;
 			try {
 				it.Prev();

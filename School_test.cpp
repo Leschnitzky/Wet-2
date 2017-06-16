@@ -159,34 +159,29 @@ int main() {
 	school.AddStudent(2,3,50);
 	school.AddStudent(6,2,20);
 	try {
-		school.TeamFight(6,3,3);
 		cout << " 1";
+		school.TeamFight(6,3,3);
 		test = false;
 		cout <<"*";
 	} catch (...) {
-		std::cout<<"pass1\n";
 	}
 	try {
-		school.TeamFight(3,-2,3);
 		cout << " 2";
+		school.TeamFight(3,-2,3);
 		test = false;
 		cout <<"*";
 	} catch (...) {
-		std::cout<<"pass2\n";
 	}
 	try {
-		school.TeamFight(1,3,-1);
 		cout << " 3";
+		school.TeamFight(1,3,-1);
 		test = false;
 		cout <<"*";
 	} catch (...) {
-		std::cout<<"pass3\n";
 	}
 	cout <<" 4";
 	school.TeamFight(1,3,4);
-	std::cout<<"pass4\n";
 	school.TeamFight(2,3,4);
-	std::cout<<"pass5\n";
 	if(school.GetNumOfWins(3)!=0){
 		test = false;
 		cout <<"*";
@@ -199,7 +194,7 @@ int main() {
 		cout <<"*";
 	}
 	cout <<"6...";
-	school.AddStudent(8,3,11);
+	school.AddStudent(8,3,41);
 	school.TeamFight(1,3,2);
 	if(school.GetNumOfWins(3)==0){
 		test = false;
