@@ -20,7 +20,7 @@ int main() {
 	} catch (...) {
 	}
 	try {
-		cout << "2...";
+		cout << " 2...";
 		School school = School(0);
 		test = true;
 		//cout <<"*";
@@ -61,7 +61,7 @@ int main() {
 		test = false;
 		cout <<"*";
 	} catch (...) {
-		cout << "4...";
+		cout << " 4...";
 	}
 	if (!test) {
 		cout << "Bad! \n";
@@ -145,7 +145,7 @@ int main() {
 		test = false;
 		cout <<"*";
 	}
-	cout << " 6...";
+	cout << " 6";
 	if (school.NumOfTeams() != 4) {
 		test = false;
 		cout <<"*";

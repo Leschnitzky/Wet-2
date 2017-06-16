@@ -51,7 +51,7 @@ public:
 		delete[] parent;
 	}
 	void MakeSet(SetElement elm, int i) {
-		if ((i > array_size) || (i < 0)) {
+		if ((i > array_size) || (i <= 0)) {
 			throw Invalid_Index();
 		}
 		if (element_data[i-1] != nullptr) {
@@ -61,45 +61,48 @@ public:
 		size[i-1] = 1;
 	}
 	SetElement* Find(int i) {
-		if ((i > array_size) || (i < 0)) {
+		if ((i > array_size) || (i <= 0)) {
 			throw Invalid_Index();
 		}
-		int index = i-1;
+		int index = i;
 		List<int> indices;
 
 		indices.PushBack(i-1);
-		while (parent[index] != -1) {
-			index = parent[index];
-			indices.PushBack(index);
+		while (parent[index-1] != -1) {
+			index = parent[index-1];
+			indices.PushBack(index-1);
 		}
 		indices.RemoveLast();
 		typename List<int>::Iterator it(indices, false);
 		while (indices.Size() != 0) {
 			parent[*it] = i;
+			size[*it] = 0;
 			try {
 				it.Prev();
 			} catch (IteratorAtStart& e) {
-				return element_data[index];
+				return element_data[index-1];
 			}
 			indices.RemoveLast();
 		}
-		return element_data[index];
+		return element_data[index-1];
 	}
 
 	void Union(int p, int q) {
+		p--;
+		q--;
 		if ((size[p] == 0) || (size[q] == 0)) {
 			throw Teams_Not_Roots();
 		}
 		if (p == q) {
 			return;
 		}
-		if (size[p-1] > size[q-1]) {
-			size[p-1] += size[q-1];
-			size[q-1] = 0;
-			parent[q-1] = p-1;
+		if (size[p] > size[q]) {
+			size[p] += size[q];
+			size[q] = 0;
+			parent[q] = p+1;
 		}
-		size[q-1] += size[p-1];
-		parent[p-1] = q-1;
+		size[q] += size[p];
+		parent[p] = q+1;
 		size[p] = 0;
 	}
 };

@@ -84,6 +84,7 @@ void School::JoinTeams(int team1, int team2) {
 	int team2_wins = team_2->NumberOfWins();
 
 	this->school_teams.Union(team1, team2);
+	this->num_of_teams--;
 
 	if(size1 > size2) { //Then merge to team1
 		team_1->BuildTeamFromArray(merged, next_size);
