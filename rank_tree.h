@@ -495,10 +495,10 @@ void RankTree<Key, Data>::insertToTree(Key key, Data data) {
 	RankTreeNode<Key, Data>* node = root;				//Create a node iterator
 	while (node) {											//Travel-tree loop
 		route.PushBack(node);						//Add the route to the list
-		if (key == node->GetKey()) {
+		if (*key == *(node->GetKey())) {
 			throw AlreadyInTree();						//The node is already in
 		}
-		if (key < node->GetKey()) {						//If key lower, go left
+		if (*key < *(node->GetKey())) {						//If key lower, go left
 			if (node->GetLeft() == nullptr) {
 				if (node->IsLeaf()) {//If the new node added to a leaf, update route +1
 					node->SetLeft(new RankTreeNode<Key, Data>(key, data));//Adds a new node
@@ -773,7 +773,7 @@ void RankTree<Key, Data>::removeFromTree(Key key) {
 	RankTreeNode<Key, Data>* node = root;		//Start the search from the root
 	while (node != nullptr) {								//Loop on the tree
 		route.PushBack(node);	//Add the current node to the route of the tree
-		if (node->GetKey() == key) {				//In case we found the node
+		if (*(node->GetKey()) == *key) {				//In case we found the node
 			if (node == root) {								//If it's the root
 				route.RemoveLast();
 				removeRoot(route);
@@ -799,7 +799,7 @@ void RankTree<Key, Data>::removeFromTree(Key key) {
 			}
 			return;
 		}
-		if (key < node->GetKey()) {								//If we go left
+		if (*key < *(node->GetKey())) {								//If we go left
 			node = node->GetLeft();
 			cond_right = false;
 			continue;
@@ -820,7 +820,7 @@ Data& RankTree<Key, Data>::findCurrentNode(RankTreeNode<Key, Data>* node,
 	if (!node->GetLeft() && !node->GetRight()) {
 		throw NotInTree();
 	}
-	if (node->GetKey() > key) {
+	if (*(node->GetKey()) > *key) {
 		return findCurrentNode(node->GetLeft(), key);
 	}
 	return findCurrentNode(node->GetRight(), key);
@@ -1176,16 +1176,16 @@ int RankTree<Key,Data>::CalcSumOfNumber(int num){
 	RankTreeNode<Key,Data>* node = root;
 	int sum = 0;
 	int num_to_count=num;
-	while((num_to_count > 0)||(node != nullptr)){
+	while((num_to_count > 0) && (node != nullptr)){
 		if(node->GetNodesRight()>num_to_count){
+			node = node->GetRight();
+		} else if (node->GetNodesRight() == num_to_count) {
+			sum += node->GetSumRight();
+			num_to_count -= node->GetNodesRight();
+		} else {
 			sum += *node->GetKey() + (node->GetSumRight());
 			num_to_count -= node->GetNodesRight() + 1;
 			node = node->GetLeft();
-		} else if(node->GetNodesRight() == num_to_count) {
-			sum += node->GetSumRight();
-			num_to_count -= node->GetNodesRight();
-		} else{
-			node = node->GetRight();
 		}
 	}
 	return sum;
@@ -1252,6 +1252,7 @@ void RankTree<Key, Data>::UpdateTreeFromPairArr(Pair<Key, Data>* arr, int len) {
 	this->deleteTree(this->root);
 	this->root = next_root;
 	delete[] node_arr;
+	this->numOfNodes = len;
 }
 
 /*

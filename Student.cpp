@@ -26,14 +26,8 @@ int Student::GetPower() {
 bool Student::operator<(const Student& other) {
 	if (this->power < other.power)
 		return true;
-	else if (this->power == other.power) {
-		if (this->student_id >= other.student_id) {
-			return true;
-		} else {
-			return false;
-		}
-	} else
-		return true;
+	else
+		return false;
 }
 
 
