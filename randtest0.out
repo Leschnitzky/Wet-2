@@ -1,0 +1,102 @@
+Init done.
+TeamFight: SUCCESS
+Team 6 won 0 times.
+RemoveStudent: INVALID_INPUT
+TeamFight: INVALID_INPUT
+AddStudent: INVALID_INPUT
+AddStudent: SUCCESS
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+GetStudentLeader: FAILURE
+TeamFight: SUCCESS
+RemoveStudent: FAILURE
+AddStudent: SUCCESS
+Team 8 won 0 times.
+AddStudent: SUCCESS
+AddStudent: SUCCESS
+JoinTeams: SUCCESS
+Team 4 won 0 times.
+RemoveStudent: FAILURE
+AddStudent: SUCCESS
+RemoveStudent: FAILURE
+GetStudentLeader: FAILURE
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+TeamFight: SUCCESS
+RemoveStudent: FAILURE
+AddStudent: SUCCESS
+GetStudentLeader: FAILURE
+AddStudent: SUCCESS
+RemoveStudent: FAILURE
+AddStudent: SUCCESS
+AddStudent: FAILURE
+AddStudent: SUCCESS
+RemoveStudent: SUCCESS
+RemoveStudent: FAILURE
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+TeamFight: INVALID_INPUT
+RemoveStudent: SUCCESS
+TeamFight: INVALID_INPUT
+RemoveStudent: FAILURE
+AddStudent: SUCCESS
+Team 1 won 0 times.
+GetStudentLeader: FAILURE
+TeamFight: INVALID_INPUT
+GetStudentLeader: FAILURE
+Team 3 won 0 times.
+RemoveStudent: FAILURE
+TeamFight: SUCCESS
+GetStudentLeader: FAILURE
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+JoinTeams: SUCCESS
+AddStudent: FAILURE
+AddStudent: SUCCESS
+Team 9 won 1 times.
+AddStudent: SUCCESS
+Team 2 won 0 times.
+RemoveStudent: FAILURE
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+TeamFight: SUCCESS
+Team 9 won 1 times.
+TeamFight: INVALID_INPUT
+Team 5 won 1 times.
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+GetStudentLeader: FAILURE
+TeamFight: SUCCESS
+TeamFight: INVALID_INPUT
+AddStudent: SUCCESS
+AddStudent: FAILURE
+Team 2 won 2 times.
+Team 2 won 2 times.
+AddStudent: FAILURE
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+GetStudentLeader: FAILURE
+TeamFight: INVALID_INPUT
+JoinTeams: SUCCESS
+AddStudent: SUCCESS
+Team 7 won 4 times.
+GetStudentLeader: FAILURE
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+JoinTeams: SUCCESS
+RemoveStudent: SUCCESS
+GetStudentLeader: FAILURE
+TeamFight: SUCCESS
+Team 11 won 2 times.
+GetStudentLeader: FAILURE
+Team 4 won 0 times.
+AddStudent: SUCCESS
+GetStudentLeader: FAILURE
+Quit done.

@@ -1,0 +1,5 @@
+diff result: wanted_output VS my_output
+490c490
+< RemoveStudent: SUCCESS
+---
+> RemoveStudent: FAILURE

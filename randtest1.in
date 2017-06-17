@@ -1,0 +1,252 @@
+Init 14
+AddStudent 49 4 101      #S
+AddStudent 31 7 40       #S
+TeamFight 4 3 2          #S
+GetNumOfWins 12          #S
+GetNumOfWins 2           #S
+GetNumOfWins 8           #S
+TeamFight 10 9 1         #S
+RemoveStudent -1         #II id <= 0
+GetNumOfWins 2           #S
+RemoveStudent 46         #F student doesn't exist
+RemoveStudent 49         #S
+GetNumOfWins 9           #S
+TeamFight 11 3 -1        #II negative number of fighters
+TeamFight 13 7 3         #S
+GetNumOfWins 3           #S
+GetStudentLeader 3       #F student doesn't exist
+GetNumOfWins 9           #S
+AddStudent 32 5 8        #S
+AddStudent 5 4 0         #II id <= 0 or power <= 0
+GetStudentLeader 4       #F student doesn't exist
+GetStudentLeader 18      #F student doesn't exist
+GetStudentLeader 47      #F student doesn't exist
+GetStudentLeader 46      #F student doesn't exist
+GetNumOfWins 7           #S
+GetStudentLeader 48      #F student doesn't exist
+AddStudent 41 11 57      #S
+GetNumOfWins 6           #S
+GetNumOfWins 12          #S
+TeamFight 11 3 2         #S
+RemoveStudent 19         #F student doesn't exist
+TeamFight 13 7 1         #S
+GetNumOfWins 6           #S
+AddStudent 11 11 91      #S
+AddStudent 4 3 3         #S
+TeamFight 14 2 -1        #II negative number of fighters
+TeamFight 6 14 4         #S
+TeamFight 12 9 1         #S
+GetNumOfWins 2           #S
+TeamFight 1 3 0          #II negative number of fighters
+RemoveStudent 40         #F student doesn't exist
+RemoveStudent 12         #F student doesn't exist
+AddStudent 11 9 26       #F student already exists
+AddStudent 38 13 49      #S
+JoinTeams 7 12           #S
+GetNumOfWins 8           #S
+TeamFight 11 10 1        #S
+GetNumOfWins 1           #S
+TeamFight 10 3 2         #S
+AddStudent 15 10 52      #S
+AddStudent 35 4 4        #S
+AddStudent 10 14 28      #S
+TeamFight 5 1 4          #S
+AddStudent 8 3 86        #S
+TeamFight 2 1 1          #S
+GetNumOfWins 12          #S
+AddStudent 28 14 2       #S
+JoinTeams 2 4            #S
+GetStudentLeader 8       #S
+TeamFight 7 6 4          #S
+GetNumOfWins 10          #S
+GetStudentLeader 37      #F student doesn't exist
+GetNumOfWins 6           #S
+GetNumOfWins 14          #S
+GetNumOfWins 10          #S
+AddStudent 19 5 50       #S
+AddStudent 54 14 97      #S
+JoinTeams 12 2           #S
+TeamFight 4 4 2          #S
+AddStudent 27 9 74       #S
+RemoveStudent 51         #F student doesn't exist
+GetStudentLeader 1       #F student doesn't exist
+AddStudent 22 8 57       #S
+GetNumOfWins 9           #S
+TeamFight 8 5 2          #S
+TeamFight 11 14 2        #S
+GetNumOfWins 4           #S
+GetStudentLeader 20      #F student doesn't exist
+TeamFight 7 13 6         #S
+AddStudent -1 3 52       #II id <= 0 or power <= 0
+GetStudentLeader 17      #F student doesn't exist
+AddStudent 8 4 53        #F student already exists
+GetStudentLeader 7       #F student doesn't exist
+GetNumOfWins 8           #S
+GetNumOfWins 2           #S
+AddStudent 53 11 -1      #II id <= 0 or power <= 0
+JoinTeams 10 2           #S
+AddStudent 35 14 92      #F student already exists
+GetNumOfWins 10          #S
+GetNumOfWins 1           #S
+GetNumOfWins 8           #S
+GetNumOfWins 8           #S
+TeamFight 5 14 6         #S
+AddStudent 26 4 58       #S
+TeamFight 11 11 4        #S
+GetNumOfWins 4           #S
+GetNumOfWins 3           #S
+GetStudentLeader 25      #F student doesn't exist
+GetNumOfWins 4           #S
+GetNumOfWins 7           #S
+RemoveStudent 2          #F student doesn't exist
+GetStudentLeader 35      #S
+TeamFight 5 2 0          #II negative number of fighters
+AddStudent 44 8 60       #S
+GetStudentLeader 34      #F student doesn't exist
+GetNumOfWins 10          #S
+GetStudentLeader 30      #F student doesn't exist
+TeamFight 8 11 8         #S
+TeamFight 13 5 9         #S
+GetNumOfWins 3           #S
+AddStudent 14 2 20       #S
+GetNumOfWins 9           #S
+TeamFight 7 11 4         #S
+TeamFight 5 3 -1         #II negative number of fighters
+GetNumOfWins 6           #S
+GetStudentLeader 41      #S
+AddStudent 15 6 5        #F student already exists
+TeamFight 13 9 -1        #II negative number of fighters
+TeamFight 11 4 7         #S
+GetNumOfWins 7           #S
+JoinTeams 5 7            #S
+AddStudent 13 10 63      #S
+JoinTeams 8 5            #S
+TeamFight 8 5 4          #S
+GetNumOfWins 2           #S
+AddStudent 36 1 59       #S
+GetNumOfWins 13          #S
+JoinTeams 3 8            #S
+GetNumOfWins 12          #S
+GetNumOfWins 14          #S
+GetStudentLeader 14      #S
+TeamFight 5 9 5          #S
+GetStudentLeader 48      #F student doesn't exist
+AddStudent 46 3 4        #S
+GetStudentLeader 2       #F student doesn't exist
+JoinTeams 7 4            #S
+GetStudentLeader 54      #S
+GetStudentLeader 35      #S
+GetNumOfWins 2           #S
+AddStudent 45 7 88       #S
+TeamFight 11 6 9         #S
+AddStudent 10 12 52      #F student already exists
+RemoveStudent 33         #F student doesn't exist
+TeamFight 5 1 5          #S
+TeamFight 10 5 9         #S
+RemoveStudent 15         #S
+GetNumOfWins 4           #S
+RemoveStudent 8          #S
+GetStudentLeader 21      #F student doesn't exist
+TeamFight 4 5 9          #S
+JoinTeams 1 7            #S
+GetNumOfWins 6           #S
+RemoveStudent 51         #F student doesn't exist
+AddStudent 49 2 68       #S
+AddStudent 20 10 40      #S
+AddStudent 31 12 44      #F student already exists
+GetNumOfWins 5           #S
+AddStudent 12 10 90      #S
+AddStudent 43 13 38      #S
+GetNumOfWins 11          #S
+GetStudentLeader 40      #F student doesn't exist
+GetNumOfWins 11          #S
+AddStudent 9 7 73        #S
+GetNumOfWins 5           #S
+AddStudent 0 10 60       #II id <= 0 or power <= 0
+GetNumOfWins 11          #S
+AddStudent 10 4 87       #F student already exists
+RemoveStudent 26         #S
+RemoveStudent 13         #S
+AddStudent 8 13 4        #S
+AddStudent 52 9 38       #S
+GetNumOfWins 3           #S
+AddStudent 53 14 13      #S
+TeamFight 4 4 -1         #II negative number of fighters
+JoinTeams 10 12          #S
+GetNumOfWins 3           #S
+AddStudent 32 4 23       #F student already exists
+AddStudent 50 6 21       #S
+JoinTeams 14 1           #S
+TeamFight 5 5 2          #S
+AddStudent 39 2 71       #S
+JoinTeams 2 6            #S
+TeamFight 9 8 10         #S
+AddStudent 41 5 57       #F student already exists
+JoinTeams 9 5            #S
+RemoveStudent 6          #F student doesn't exist
+AddStudent 45 12 8       #F student already exists
+GetStudentLeader 21      #F student doesn't exist
+JoinTeams 5 11           #S
+JoinTeams 2 6            #S
+TeamFight 7 7 2          #S
+GetStudentLeader 44      #S
+GetNumOfWins 2           #S
+AddStudent 18 14 91      #S
+GetNumOfWins 3           #S
+GetNumOfWins 4           #S
+GetStudentLeader 51      #F student doesn't exist
+RemoveStudent 19         #S
+RemoveStudent 37         #F student doesn't exist
+AddStudent 39 14 -1      #II id <= 0 or power <= 0
+AddStudent 9 13 15       #F student already exists
+AddStudent 13 11 53      #S
+TeamFight 2 13 5         #S
+TeamFight 12 11 12       #S
+TeamFight 6 5 10         #S
+AddStudent 49 3 89       #F student already exists
+TeamFight 4 9 12         #S
+AddStudent 34 8 33       #S
+TeamFight 12 10 -1       #II negative number of fighters
+GetNumOfWins 2           #S
+TeamFight 3 10 11        #S
+TeamFight 5 4 3          #S
+AddStudent 44 10 18      #F student already exists
+AddStudent 0 3 80        #II id <= 0 or power <= 0
+AddStudent 12 3 0        #II id <= 0 or power <= 0
+GetStudentLeader 42      #F student doesn't exist
+AddStudent 45 9 82       #F student already exists
+AddStudent 46 4 11       #F student already exists
+RemoveStudent 6          #F student doesn't exist
+AddStudent 27 5 51       #F student already exists
+TeamFight 14 2 -1        #II negative number of fighters
+AddStudent 26 13 25      #S
+TeamFight 2 9 9          #S
+AddStudent 50 14 8       #F student already exists
+TeamFight 1 1 10         #S
+TeamFight 13 2 4         #S
+GetNumOfWins 2           #S
+RemoveStudent 4          #S
+AddStudent 49 1 82       #F student already exists
+GetStudentLeader 53      #S
+GetNumOfWins 13          #S
+TeamFight 12 5 0         #II negative number of fighters
+AddStudent 38 4 97       #F student already exists
+GetNumOfWins 7           #S
+GetNumOfWins 14          #S
+GetStudentLeader 5       #F student doesn't exist
+TeamFight 5 7 4          #S
+RemoveStudent 17         #F student doesn't exist
+GetNumOfWins 11          #S
+RemoveStudent 50         #S
+GetStudentLeader 23      #F student doesn't exist
+GetStudentLeader 16      #F student doesn't exist
+GetNumOfWins 9           #S
+GetStudentLeader 38      #S
+GetNumOfWins 7           #S
+GetStudentLeader -1      #II invalid id
+JoinTeams 5 14           #S
+TeamFight 12 14 8        #S
+AddStudent 2 10 79       #S
+AddStudent 1 1 18        #S
+AddStudent 26 11 97      #F student already exists
+Quit
