@@ -7,6 +7,9 @@
 
 #ifndef UNION_FIND_H_
 #define UNION_FIND_H_
+#ifndef nullptr
+#define nullptr 0
+#endif
 
 #include "List.h"
 #include <iostream>

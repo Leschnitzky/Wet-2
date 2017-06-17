@@ -7,6 +7,9 @@
 
 #ifndef RANK_TREE_H_
 #define RANK_TREE_H_
+#ifndef nullptr
+#define nullptr 0
+#endif
 #include <iostream>
 #include "List.h"
 #include "KVPair.h"

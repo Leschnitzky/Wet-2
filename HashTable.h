@@ -7,6 +7,9 @@
 
 #ifndef HASHTABLE_H_
 #define HASHTABLE_H_
+#ifndef nullptr
+#define nullptr 0
+#endif
 
 /*
  * Class for a hash-table implemented with regular hash.

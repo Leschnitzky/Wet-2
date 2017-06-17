@@ -7,6 +7,9 @@
 
 #ifndef STUDENT_H_
 #define STUDENT_H_
+#ifndef nullptr
+#define nullptr 0
+#endif
 
 /*
  * Class for describing a single student of the school.
