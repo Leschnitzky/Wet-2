@@ -28,6 +28,8 @@ StatusType AddStudent(void *DS, int StudentID, int Team ,int Power) {
 		return FAILURE;
 	} catch(AllocError& e) {
 		return ALLOCATION_ERROR;
+	} catch(AlreadyInTree& e){
+		return FAILURE;
 	}
 }
 
@@ -40,6 +42,8 @@ StatusType RemoveStudent(void *DS, int StudentID) {
 	} catch(InvalidArg& e) {
 		return INVALID_INPUT;
 	} catch(StudentNotInSystem& e) {
+		return FAILURE;
+	} catch(NotInTree& e){
 		return FAILURE;
 	}
 }

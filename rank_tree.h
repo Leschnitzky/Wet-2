@@ -688,6 +688,9 @@ void RankTree<Key, Data>::removeLeftTwoSons(RankTreeNode<Key, Data>* father,
 
 template<class Key, class Data>
 void RankTree<Key, Data>::updateRank(RankTreeNode<Key, Data>* node) {
+	if(!node){
+		return;
+	}
 	if (node->IsLeaf()) {
 		node->SetNodesLeft(0);
 		node->SetNodesRight(0);
@@ -968,9 +971,14 @@ void RankTree<Key, Data>::shiftRL(RankTreeNode<Key, Data>* node,
 	if (!node->GetRight()) {
 		return;
 	}
+	RankTreeNode<Key,Data>* temp_1 = node->GetRight();
+	RankTreeNode<Key,Data>* temp_2 = node->GetRight()->GetLeft();
 	route.PushBack(node->GetRight());
 	shiftLL(node->GetRight(), route);	//First LL the right node with it's left
 	shiftRR(node, route);			//Then RR the father with it's right node
+	updateRank(node);
+	updateRank(temp_1);
+	updateRank(temp_2);
 
 }
 
@@ -983,11 +991,14 @@ void RankTree<Key, Data>::shiftLR(RankTreeNode<Key, Data>* node,
 	if (!node->GetLeft()) {
 		return;
 	}
+	RankTreeNode<Key,Data>* temp_1 = node->GetLeft();
+	RankTreeNode<Key,Data>* temp_2 = node->GetLeft()->GetRight();
 	route.PushBack(node->GetLeft());
 	shiftRR(node->GetLeft(), route);
 	shiftLL(node, route);
-	//updateRank(node);
-	//updateRank(node->GetLeft());
+	updateRank(temp_1);
+	updateRank(node);
+	updateRank(temp_2);
 }
 
 template<class Key, class Data>
