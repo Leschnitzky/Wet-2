@@ -30,6 +30,7 @@ private:
 	HashTable<Student*> student_id_to_student;
 	HashTable<int> student_to_teamID;
 	UF<Team> school_teams;
+	Team** all_teams;
 	int num_of_teams;
 
 	Student** MergeStudsByPower(Student** arr1, int len1, Student** arr2, int len2);

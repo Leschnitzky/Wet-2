@@ -12,14 +12,30 @@ School::School(int n) : school_teams(n) {
 	if(n <= 0)
 		this->num_of_teams = 0;
 	this->num_of_teams = n;
+	this->all_teams = new Team*[n];
 	for (int i = 1; i <= n; i++) {
 		Team* team = new Team(i);
+		this->all_teams[i-1] = team;
 		school_teams.MakeSet(*team, i);
 	}
 }
 
 School::~School() {
+	//Delete all teams
+	for(int i = 0; i < this->num_of_teams; i++) {
+		delete this->all_teams[i];
+	}
+	delete[] this->all_teams;
 
+	//Delete all students
+	int size = 0;
+	Pair<int, Student*>** students_arr = this->student_id_to_student.FlushTable(&size);
+	for(int i = 0; i < size; i++) {
+		Student* actual = students_arr[i]->GetValue();
+		delete actual;
+		delete students_arr[i];
+	}
+	delete[] students_arr;
 }
 
 int School::NumOfStudents() {
@@ -62,6 +78,7 @@ void School::RemoveStudent(int student_id) {
 	this->student_to_teamID.Delete(student_id);
 	Team* student_old_team = this->school_teams.Find(prev_team);
 	student_old_team->RemoveStudent(student_full);
+	delete student_full;
 }
 
 void School::JoinTeams(int team1, int team2) {
@@ -90,6 +107,10 @@ void School::JoinTeams(int team1, int team2) {
 	}
 	root->BuildTeamFromArray(merged, next_size);
 	root->SetWins(team1_wins + team2_wins);
+
+	delete[] arr1;
+	delete[] arr2;
+	delete[] merged;
 
 /*	if(size1 > size2) { //Then merge to team1
 		team_1->BuildTeamFromArray(merged, next_size);
@@ -147,8 +168,14 @@ Student** School::MergeStudsByPower(Student** arr1, int len1, Student** arr2, in
 	while(i1 != len1 && i2 != len2) {
 		if(arr1[i1]->GetPower() < arr2[i2]->GetPower())
 			res[i3++] = arr1[i1++];
-		else
+		else if (arr1[i1]->GetPower() > arr2[i2]->GetPower())
 			res[i3++] = arr2[i2++];
+		else { //If power equal
+			if(arr1[i1]->GetID() > arr2[i2]->GetID())
+				res[i3++] = arr1[i1++];
+			else
+				res[i3++] = arr2[i2++];
+		}
 	}
 	while(i1 < len1)
 		res[i3++] = arr1[i1++];
