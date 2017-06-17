@@ -569,6 +569,8 @@ void RankTree<Key, Data>::removeRoot(List<RankTreeNode<Key, Data>*> route) {
 		int height = root->GetHeight();
 		int num_left = root->GetNodesLeft();
 		int num_right = root->GetNodesRight();
+		int sum_left = root->GetSumLeft();
+		int sum_right = root->GetSumRight();
 		RankTreeNode<Key, Data>* left = root->GetLeft();
 		RankTreeNode<Key, Data>* right = root->GetRight();
 		*(root) = *temp;
@@ -577,6 +579,8 @@ void RankTree<Key, Data>::removeRoot(List<RankTreeNode<Key, Data>*> route) {
 		root->SetHeight(height);
 		root->SetNodesLeft(num_left - 1);
 		root->SetNodesRight(num_right);
+		root->SetSumRight(sum_right);
+		root->SetSumLeft(sum_left);
 		typename List<RankTreeNode<Key, Data>*>::Iterator it(route, false);
 		removeNode(*it, removeRight, route);
 	}
@@ -649,14 +653,18 @@ void RankTree<Key, Data>::removeRightTwoSons(RankTreeNode<Key, Data>* father,
 	int height = temp->GetHeight();
 	int num_left = temp->GetNodesLeft();
 	int num_right = temp->GetNodesRight();
+	int sum_right = temp->GetSumRight();
+	int sum_left = temp->GetSumLeft();
 	RankTreeNode<Key, Data>* right = temp->GetRight();
 	RankTreeNode<Key, Data>* left = temp->GetLeft();
 	*temp = *(next);
 	temp->SetRight(right);
 	temp->SetLeft(left);
-	temp->SetHeight(height);
 	temp->SetNodesRight(num_right);
 	temp->SetNodesLeft(num_left);
+	temp->SetSumLeft(sum_left);
+	temp->SetSumRight(sum_right);
+	temp->SetHeight(height);
 	typename List<RankTreeNode<Key, Data>*>::Iterator it(route, false);	//The last node before the leaf.
 	removeNode((*it), removeRight, route);
 }
@@ -678,9 +686,17 @@ void RankTree<Key, Data>::removeLeftTwoSons(RankTreeNode<Key, Data>* father,
 	int height = temp->GetHeight();
 	RankTreeNode<Key, Data>* right = temp->GetRight();
 	RankTreeNode<Key, Data>* left = temp->GetLeft();
+	int num_left = temp->GetNodesLeft();
+	int num_right = temp->GetNodesRight();
+	int sum_right = temp->GetSumRight();
+	int sum_left = temp->GetSumLeft();
 	*temp = *next;											//Switch the nodes
 	temp->SetRight(right);
 	temp->SetLeft(left);
+	temp->SetNodesRight(num_right);
+	temp->SetNodesLeft(num_left);
+	temp->SetSumLeft(sum_left);
+	temp->SetSumRight(sum_right);
 	temp->SetHeight(height);
 	typename List<RankTreeNode<Key, Data>*>::Iterator it(route, false);
 	removeNode((*it), removeRight, route);
@@ -818,7 +834,7 @@ Data& RankTree<Key, Data>::findCurrentNode(RankTreeNode<Key, Data>* node,
 		Key key) {		//Recursive find in the tree.
 	if (node == nullptr)
 		throw NotInTree();
-	if (node->GetKey() == key)
+	if (*(node->GetKey())== *key)
 		return node->GetData();
 	if (!node->GetLeft() && !node->GetRight()) {
 		throw NotInTree();
@@ -1094,8 +1110,8 @@ void RankTree<Key, Data>::Inorder_aux(RankTreeNode<Key, Data>* root) {
 	if (root == nullptr)
 		return;
 	Inorder_aux(root->GetLeft());
-	std::cout << root->GetKey() << " -(" << root->GetNodesLeft() << ","
-			<< root->GetNodesRight() << ") , ";
+	std::cout << root->GetKey()->GetID() << " -(" << root->GetKey()->GetPower() << ","
+			<< root->GetNodesLeft() << "," << root->GetNodesRight() <<") , ";
 	Inorder_aux(root->GetRight());
 }
 
