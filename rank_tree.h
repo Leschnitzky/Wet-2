@@ -986,8 +986,8 @@ void RankTree<Key, Data>::shiftLR(RankTreeNode<Key, Data>* node,
 	route.PushBack(node->GetLeft());
 	shiftRR(node->GetLeft(), route);
 	shiftLL(node, route);
-	updateRank(node);
-	updateRank(node->GetRight());
+	//updateRank(node);
+	//updateRank(node->GetLeft());
 }
 
 template<class Key, class Data>

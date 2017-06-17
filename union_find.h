@@ -27,6 +27,29 @@ private:
 	int* parent;
 	int* size;
 	int array_size;
+
+	int getRoot(int q) {
+		int index = q + 1;
+		List<int> indices;
+		indices.PushBack(index - 1);
+		while (parent[index - 1] != -1) {
+			index = parent[index - 1];
+			indices.PushBack(index - 1);
+		}
+		indices.RemoveLast();
+		typename List<int>::Iterator it(indices, false);
+		while (indices.Size() != 0) {
+			parent[*it] = index;
+			size[*it] = 0;
+			try {
+				it.Prev();
+			} catch (IteratorAtStart& e) {
+				return index;
+			}
+			indices.RemoveLast();
+		}
+		return index;
+	}
 public:
 	UF(int n) :
 			array_size(n) {
@@ -54,11 +77,11 @@ public:
 		if ((i > array_size) || (i <= 0)) {
 			throw Invalid_Index();
 		}
-		if (element_data[i-1] != nullptr) {
+		if (element_data[i - 1] != nullptr) {
 			throw Not_Empty();
 		}
-		element_data[i-1] = new SetElement(elm);
-		size[i-1] = 1;
+		element_data[i - 1] = new SetElement(elm);
+		size[i - 1] = 1;
 	}
 	SetElement* Find(int i) {
 		if ((i > array_size) || (i <= 0)) {
@@ -66,11 +89,10 @@ public:
 		}
 		int index = i;
 		List<int> indices;
-
-		indices.PushBack(i-1);
-		while (parent[index-1] != -1) {
-			index = parent[index-1];
-			indices.PushBack(index-1);
+		indices.PushBack(index - 1);
+		while (parent[index - 1] != -1) {
+			index = parent[index - 1];
+			indices.PushBack(index - 1);
 		}
 		indices.RemoveLast();
 		typename List<int>::Iterator it(indices, false);
@@ -80,18 +102,21 @@ public:
 			try {
 				it.Prev();
 			} catch (IteratorAtStart& e) {
-				return element_data[index-1];
+				return element_data[index - 1];
 			}
 			indices.RemoveLast();
 		}
-		return element_data[index-1];
+		return element_data[index - 1];
 	}
 
 	void Union(int p, int q) {
 		p--;
 		q--;
 		if ((size[p] == 0) || (size[q] == 0)) {
-			throw Teams_Not_Roots();
+			int root1 = getRoot(q);
+			int root2 = getRoot(p);
+			Union(root1, root2);
+			return;
 		}
 		if (p == q) {
 			return;
@@ -99,10 +124,11 @@ public:
 		if (size[p] > size[q]) {
 			size[p] += size[q];
 			size[q] = 0;
-			parent[q] = p+1;
+			parent[q] = p + 1;
+			return;
 		}
 		size[q] += size[p];
-		parent[p] = q+1;
+		parent[p] = q + 1;
 		size[p] = 0;
 	}
 };

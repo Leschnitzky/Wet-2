@@ -51,6 +51,12 @@ public:
 	//Returns the most powerful student on the team.
 	int MostPowerfulInGroup();
 
+	//Returns the power of the most powerful student
+	int PowerInGroup();
+
+	//Updates the most powerful in group
+	void UpdateMostPower(int key,int value);
+
 	//Returns the amount of times the current team won against
 	//other teams.
 	int NumberOfWins();

@@ -64,6 +64,13 @@ void Team::RemoveStudent(Student* student) {
 int Team::MostPowerfulInGroup() {
 	return this->most_powerful.GetKey();
 }
+int Team::PowerInGroup() {
+	return this->most_powerful.GetValue();
+}
+
+void Team::UpdateMostPower(int key,int value){
+	this->most_powerful= Pair<int,int>(key,value);
+}
 
 int Team::NumberOfWins() {
 	return this->num_of_wins;

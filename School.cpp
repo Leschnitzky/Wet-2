@@ -69,6 +69,7 @@ void School::JoinTeams(int team1, int team2) {
 	|| (team1 > this->num_of_teams) || (team2 > this->num_of_teams))
 		throw InvalidArg();
 
+	bool change_most_p;
 	Team* team_1 = this->school_teams.Find(team1);
 	Team* team_2 = this->school_teams.Find(team2);
 	if(team_1->GetID() == team_2->GetID())
@@ -82,14 +83,23 @@ void School::JoinTeams(int team1, int team2) {
 	int next_size = size1 + size2;
 	int team1_wins = team_1->NumberOfWins();
 	int team2_wins = team_2->NumberOfWins();
-
+	int strongest_key = team_1->MostPowerfulInGroup();
+	int strongest_power = team_1->MostPowerfulInGroup();
+	if(team_2->PowerInGroup() >= team_1->PowerInGroup()){
+		if(team_2->PowerInGroup()==team_1->PowerInGroup()){
+			change_most_p = false;
+		}
+		strongest_key = team_2->MostPowerfulInGroup();
+		strongest_power = team_2->PowerInGroup();
+	}
 	this->school_teams.Union(team1, team2);
-	this->num_of_teams--;
 
 	Team* root = this->school_teams.Find(team1);
 	root->BuildTeamFromArray(merged, next_size);
 	root->SetWins(team1_wins + team2_wins);
-
+	if(change_most_p){
+		root->UpdateMostPower(strongest_key,strongest_power);
+	}
 /*	if(size1 > size2) { //Then merge to team1
 		team_1->BuildTeamFromArray(merged, next_size);
 		team_1->SetWins(team1_wins + team2_wins);
@@ -102,7 +112,7 @@ void School::JoinTeams(int team1, int team2) {
 
 void School::TeamFight(int team1, int team2, int num_of_fighters) {
 	if ((team1 <= 0) || (team2 <= 0) || (team1 > num_of_teams)
-			|| (team2 > num_of_teams) || (num_of_fighters < 0)) {
+			|| (team2 > num_of_teams) || (num_of_fighters <= 0)) {
 		throw InvalidArg();
 	}
 	Team* team_1 = school_teams.Find(team1);
