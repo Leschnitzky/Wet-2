@@ -29,11 +29,11 @@ template<typename Data> class HashTable {
 private:
 	//Hashtable will be initialied with this size.
 	//The number is a large prime number that
-	const int START_SIZE = 128;
+	const int START_SIZE;
 //	//In case we will be using double  hashing.
 //	const int JUMP_SIZE  = 7;
 	//The factor by which we will multiply/divide the table size when resizing.
-	const int RESIZE_FACTOR = 2;
+	const int RESIZE_FACTOR;
 	//The amount of cells in the hash currently being actually used.
 	int item_count;
 	//The size of the table at a given moment.
@@ -209,7 +209,7 @@ private:
 		delete to_delete;
 	}
 public:
-	HashTable() : max_list_length(0) {
+	HashTable() : START_SIZE(128), RESIZE_FACTOR(2), max_list_length(0) {
 		this->downsize_enable = false;
 		this->current_table_size = this->START_SIZE;
 		this->item_count = 0;
