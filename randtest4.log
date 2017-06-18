@@ -1,5 +1,0 @@
-diff result: wanted_output VS my_output
-2169c2169
-< RemoveStudent: SUCCESS
----
-> RemoveStudent: FAILURE

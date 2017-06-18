@@ -2,505 +2,505 @@ void test() {
    int leader;
    int number_of_wins;
    void* DS = Init(16);
-   TeamFight(DS,6,10,1);
-   AddStudent(DS,0,4,70);
-   TeamFight(DS,11,4,-1);
-   RemoveStudent(DS,55);
-   GetNumOfWins(DS,2,&number_of_wins);
-   TeamFight(DS,1,15,0);
-   AddStudent(DS,28,10,30);
-   GetNumOfWins(DS,8,&number_of_wins);
-   RemoveStudent(DS,4); // 10
-   AddStudent(DS,30,9,25);
-   AddStudent(DS,46,6,14);
-   TeamFight(DS,8,16,1);
-   AddStudent(DS,23,15,14);
-   AddStudent(DS,22,13,14);
-   GetStudentTeamLeader(DS,2,&leader);
-   RemoveStudent(DS,39);
-   AddStudent(DS,8,11,96);
-   AddStudent(DS,12,6,37);
-   TeamFight(DS,4,4,3); // 20
-   JoinTeams(DS,9,2);
-   GetNumOfWins(DS,3,&number_of_wins);
-   GetNumOfWins(DS,1,&number_of_wins);
-   RemoveStudent(DS,11);
-   GetStudentTeamLeader(DS,40,&leader);
-   TeamFight(DS,16,10,1);
-   TeamFight(DS,9,9,-1);
-   RemoveStudent(DS,16);
-   GetNumOfWins(DS,3,&number_of_wins);
-   RemoveStudent(DS,52); // 30
-   AddStudent(DS,9,3,84);
-   GetNumOfWins(DS,1,&number_of_wins);
-   AddStudent(DS,18,5,74);
-   JoinTeams(DS,16,7);
-   GetNumOfWins(DS,11,&number_of_wins);
-   AddStudent(DS,22,7,61);
-   GetStudentTeamLeader(DS,5,&leader);
-   AddStudent(DS,25,1,19);
-   GetNumOfWins(DS,11,&number_of_wins);
-   AddStudent(DS,39,5,51); // 40
-   GetNumOfWins(DS,16,&number_of_wins);
-   AddStudent(DS,47,14,58);
-   TeamFight(DS,14,3,2);
-   JoinTeams(DS,8,3);
-   GetStudentTeamLeader(DS,34,&leader);
-   GetNumOfWins(DS,10,&number_of_wins);
-   RemoveStudent(DS,45);
-   JoinTeams(DS,7,8);
-   AddStudent(DS,21,12,65);
-   GetNumOfWins(DS,6,&number_of_wins); // 50
-   AddStudent(DS,50,6,128);
-   TeamFight(DS,12,15,0);
-   GetNumOfWins(DS,3,&number_of_wins);
-   GetNumOfWins(DS,12,&number_of_wins);
-   TeamFight(DS,15,6,2);
-   AddStudent(DS,4,6,21);
-   TeamFight(DS,7,6,4);
-   GetNumOfWins(DS,14,&number_of_wins);
-   AddStudent(DS,11,13,65);
-   TeamFight(DS,4,3,9); // 60
-   RemoveStudent(DS,45);
-   TeamFight(DS,6,5,5);
-   JoinTeams(DS,7,3);
-   GetStudentTeamLeader(DS,0,&leader);
-   GetStudentTeamLeader(DS,51,&leader);
-   GetStudentTeamLeader(DS,2,&leader);
-   TeamFight(DS,7,16,2);
-   GetNumOfWins(DS,3,&number_of_wins);
-   TeamFight(DS,15,7,-1);
-   TeamFight(DS,4,16,1); // 70
-   AddStudent(DS,13,4,61);
-   GetNumOfWins(DS,12,&number_of_wins);
-   TeamFight(DS,1,12,5);
-   GetNumOfWins(DS,4,&number_of_wins);
-   GetNumOfWins(DS,10,&number_of_wins);
-   TeamFight(DS,7,13,1);
-   GetNumOfWins(DS,9,&number_of_wins);
-   TeamFight(DS,10,7,2);
-   GetStudentTeamLeader(DS,59,&leader);
-   GetNumOfWins(DS,5,&number_of_wins); // 80
-   RemoveStudent(DS,43);
-   AddStudent(DS,12,10,15);
-   TeamFight(DS,2,2,8);
-   AddStudent(DS,54,6,106);
-   AddStudent(DS,51,2,105);
-   AddStudent(DS,63,7,8);
-   GetStudentTeamLeader(DS,25,&leader);
-   RemoveStudent(DS,63);
-   JoinTeams(DS,16,8);
-   RemoveStudent(DS,61); // 90
-   TeamFight(DS,6,11,-1);
-   GetNumOfWins(DS,3,&number_of_wins);
-   GetStudentTeamLeader(DS,44,&leader);
-   TeamFight(DS,6,4,9);
-   AddStudent(DS,44,13,113);
-   GetStudentTeamLeader(DS,17,&leader);
-   AddStudent(DS,6,16,91);
-   TeamFight(DS,12,12,2);
-   AddStudent(DS,46,3,23);
-   AddStudent(DS,8,10,129); // 100
-   GetNumOfWins(DS,12,&number_of_wins);
-   GetStudentTeamLeader(DS,60,&leader);
-   GetStudentTeamLeader(DS,52,&leader);
-   AddStudent(DS,2,10,74);
-   TeamFight(DS,2,5,6);
-   GetNumOfWins(DS,3,&number_of_wins);
-   AddStudent(DS,52,16,25);
-   TeamFight(DS,12,8,6);
-   GetNumOfWins(DS,13,&number_of_wins);
-   AddStudent(DS,45,4,113); // 110
-   JoinTeams(DS,16,10);
-   GetNumOfWins(DS,2,&number_of_wins);
-   JoinTeams(DS,3,14);
-   GetStudentTeamLeader(DS,57,&leader);
-   AddStudent(DS,9,2,99);
-   GetStudentTeamLeader(DS,18,&leader);
-   GetStudentTeamLeader(DS,18,&leader);
-   RemoveStudent(DS,48);
-   RemoveStudent(DS,61);
-   AddStudent(DS,36,7,31); // 120
-   RemoveStudent(DS,4);
-   RemoveStudent(DS,63);
-   AddStudent(DS,25,11,24);
-   AddStudent(DS,21,2,42);
-   AddStudent(DS,39,14,22);
-   AddStudent(DS,8,13,0);
-   AddStudent(DS,45,12,8);
-   RemoveStudent(DS,0);
-   TeamFight(DS,1,10,1);
-   AddStudent(DS,17,15,0); // 130
-   JoinTeams(DS,8,12);
-   AddStudent(DS,2,7,17);
-   GetNumOfWins(DS,11,&number_of_wins);
-   GetStudentTeamLeader(DS,56,&leader);
-   AddStudent(DS,4,4,84);
-   GetStudentTeamLeader(DS,23,&leader);
-   GetNumOfWins(DS,16,&number_of_wins);
-   TeamFight(DS,2,9,4);
-   TeamFight(DS,9,13,7);
-   GetNumOfWins(DS,15,&number_of_wins); // 140
-   GetNumOfWins(DS,9,&number_of_wins);
-   AddStudent(DS,3,2,84);
-   AddStudent(DS,8,8,82);
-   GetNumOfWins(DS,11,&number_of_wins);
-   AddStudent(DS,-1,5,135);
-   GetStudentTeamLeader(DS,51,&leader);
-   GetStudentTeamLeader(DS,56,&leader);
-   AddStudent(DS,9,13,24);
-   GetNumOfWins(DS,14,&number_of_wins);
-   TeamFight(DS,13,6,8); // 150
-   TeamFight(DS,7,4,4);
-   AddStudent(DS,30,2,74);
-   AddStudent(DS,20,2,63);
-   RemoveStudent(DS,29);
-   GetStudentTeamLeader(DS,46,&leader);
-   TeamFight(DS,5,12,4);
-   AddStudent(DS,47,6,103);
-   TeamFight(DS,4,4,0);
-   GetStudentTeamLeader(DS,18,&leader);
-   JoinTeams(DS,15,6); // 160
-   GetStudentTeamLeader(DS,18,&leader);
-   TeamFight(DS,9,5,1);
-   AddStudent(DS,22,5,79);
-   AddStudent(DS,26,10,120);
-   TeamFight(DS,10,5,-1);
-   TeamFight(DS,13,12,7);
-   AddStudent(DS,50,15,6);
-   GetNumOfWins(DS,13,&number_of_wins);
-   AddStudent(DS,1,7,70);
-   TeamFight(DS,14,7,5); // 170
-   TeamFight(DS,16,14,1);
-   AddStudent(DS,4,2,49);
-   TeamFight(DS,10,15,0);
-   RemoveStudent(DS,61);
-   RemoveStudent(DS,27);
-   GetNumOfWins(DS,1,&number_of_wins);
-   GetNumOfWins(DS,4,&number_of_wins);
-   RemoveStudent(DS,26);
-   JoinTeams(DS,8,9);
-   TeamFight(DS,16,14,7); // 180
-   TeamFight(DS,6,12,0);
-   TeamFight(DS,13,9,0);
-   AddStudent(DS,27,4,89);
-   JoinTeams(DS,10,8);
-   AddStudent(DS,53,9,60);
-   RemoveStudent(DS,23);
-   AddStudent(DS,18,14,54);
-   AddStudent(DS,34,10,42);
-   RemoveStudent(DS,10);
-   TeamFight(DS,11,10,1); // 190
-   GetNumOfWins(DS,13,&number_of_wins);
-   TeamFight(DS,15,1,6);
-   JoinTeams(DS,12,2);
-   AddStudent(DS,39,8,114);
-   AddStudent(DS,59,7,129);
-   RemoveStudent(DS,45);
-   TeamFight(DS,15,10,6);
-   AddStudent(DS,0,6,113);
-   GetNumOfWins(DS,15,&number_of_wins);
-   RemoveStudent(DS,18); // 200
-   TeamFight(DS,7,2,8);
-   GetNumOfWins(DS,12,&number_of_wins);
-   TeamFight(DS,12,2,3);
-   GetNumOfWins(DS,12,&number_of_wins);
-   TeamFight(DS,9,10,6);
-   TeamFight(DS,16,10,5);
-   TeamFight(DS,10,13,7);
-   GetStudentTeamLeader(DS,54,&leader);
-   GetNumOfWins(DS,7,&number_of_wins);
-   AddStudent(DS,21,4,51); // 210
-   TeamFight(DS,10,10,5);
-   AddStudent(DS,58,2,96);
-   AddStudent(DS,63,4,99);
-   AddStudent(DS,26,13,3);
-   GetStudentTeamLeader(DS,46,&leader);
-   AddStudent(DS,10,10,105);
-   AddStudent(DS,53,11,37);
-   JoinTeams(DS,7,5);
-   AddStudent(DS,15,6,66);
-   TeamFight(DS,11,7,6); // 220
-   AddStudent(DS,28,16,64);
-   JoinTeams(DS,13,11);
-   AddStudent(DS,48,16,122);
-   TeamFight(DS,15,8,14);
-   JoinTeams(DS,8,3);
-   JoinTeams(DS,15,6);
-   RemoveStudent(DS,-1);
-   GetStudentTeamLeader(DS,52,&leader);
-   GetNumOfWins(DS,1,&number_of_wins);
-   JoinTeams(DS,11,6); // 230
-   GetStudentTeamLeader(DS,44,&leader);
-   AddStudent(DS,4,4,107);
-   TeamFight(DS,1,4,12);
-   GetNumOfWins(DS,14,&number_of_wins);
-   GetNumOfWins(DS,7,&number_of_wins);
-   AddStudent(DS,-1,9,31);
-   GetStudentTeamLeader(DS,11,&leader);
-   GetNumOfWins(DS,16,&number_of_wins);
-   GetNumOfWins(DS,6,&number_of_wins);
-   AddStudent(DS,8,10,32); // 240
-   TeamFight(DS,12,13,3);
-   RemoveStudent(DS,51);
-   GetNumOfWins(DS,11,&number_of_wins);
-   AddStudent(DS,53,14,121);
-   RemoveStudent(DS,16);
-   RemoveStudent(DS,47);
-   AddStudent(DS,14,4,92);
-   GetStudentTeamLeader(DS,16,&leader);
-   TeamFight(DS,16,13,10);
-   TeamFight(DS,10,9,2); // 250
-   GetStudentTeamLeader(DS,23,&leader);
-   AddStudent(DS,9,8,77);
-   RemoveStudent(DS,12);
-   RemoveStudent(DS,2);
-   TeamFight(DS,14,6,3);
-   GetNumOfWins(DS,16,&number_of_wins);
-   TeamFight(DS,5,5,14);
-   GetNumOfWins(DS,12,&number_of_wins);
-   AddStudent(DS,19,10,108);
-   RemoveStudent(DS,34); // 260
-   RemoveStudent(DS,58);
-   GetStudentTeamLeader(DS,32,&leader);
-   TeamFight(DS,12,4,5);
-   GetNumOfWins(DS,2,&number_of_wins);
-   TeamFight(DS,14,8,0);
-   TeamFight(DS,5,14,5);
-   RemoveStudent(DS,-1);
-   AddStudent(DS,52,2,4);
-   TeamFight(DS,14,6,3);
-   GetNumOfWins(DS,6,&number_of_wins); // 270
-   AddStudent(DS,26,16,59);
-   TeamFight(DS,16,12,1);
-   TeamFight(DS,1,10,0);
-   RemoveStudent(DS,31);
-   AddStudent(DS,7,2,62);
-   JoinTeams(DS,2,15);
-   AddStudent(DS,16,15,34);
-   TeamFight(DS,6,10,10);
-   TeamFight(DS,14,3,8);
-   TeamFight(DS,5,11,9); // 280
-   JoinTeams(DS,5,9);
-   TeamFight(DS,10,7,14);
-   TeamFight(DS,6,4,7);
-   AddStudent(DS,62,5,116);
-   GetNumOfWins(DS,15,&number_of_wins);
-   AddStudent(DS,52,8,117);
-   TeamFight(DS,14,14,-1);
-   TeamFight(DS,3,7,12);
-   TeamFight(DS,11,14,12);
-   AddStudent(DS,54,10,108); // 290
-   TeamFight(DS,3,14,4);
-   RemoveStudent(DS,41);
-   RemoveStudent(DS,17);
-   AddStudent(DS,63,3,10);
-   TeamFight(DS,14,5,2);
-   GetStudentTeamLeader(DS,33,&leader);
-   TeamFight(DS,10,14,2);
-   AddStudent(DS,19,3,79);
-   AddStudent(DS,39,11,81);
-   GetNumOfWins(DS,7,&number_of_wins); // 300
-   AddStudent(DS,35,12,37);
-   AddStudent(DS,16,6,70);
-   GetNumOfWins(DS,8,&number_of_wins);
-   GetNumOfWins(DS,6,&number_of_wins);
-   AddStudent(DS,33,2,33);
-   JoinTeams(DS,8,5);
-   AddStudent(DS,23,10,120);
-   AddStudent(DS,45,11,28);
-   GetNumOfWins(DS,13,&number_of_wins);
-   AddStudent(DS,-1,6,89); // 310
-   GetNumOfWins(DS,2,&number_of_wins);
-   TeamFight(DS,9,8,4);
-   GetNumOfWins(DS,12,&number_of_wins);
-   GetStudentTeamLeader(DS,45,&leader);
-   JoinTeams(DS,13,2);
-   TeamFight(DS,15,14,-1);
-   RemoveStudent(DS,8);
-   TeamFight(DS,7,12,1);
-   GetNumOfWins(DS,11,&number_of_wins);
-   GetStudentTeamLeader(DS,0,&leader); // 320
-   TeamFight(DS,9,16,14);
-   TeamFight(DS,14,7,12);
-   AddStudent(DS,40,14,22);
-   JoinTeams(DS,10,12);
-   AddStudent(DS,56,13,33);
-   AddStudent(DS,38,15,16);
-   AddStudent(DS,45,9,130);
-   AddStudent(DS,35,10,20);
    RemoveStudent(DS,54);
-   AddStudent(DS,3,3,32); // 330
-   RemoveStudent(DS,58);
-   TeamFight(DS,1,11,14);
-   GetStudentTeamLeader(DS,31,&leader);
-   AddStudent(DS,26,3,119);
-   AddStudent(DS,40,4,130);
-   AddStudent(DS,34,15,92);
-   GetStudentTeamLeader(DS,55,&leader);
-   GetStudentTeamLeader(DS,3,&leader);
-   TeamFight(DS,5,11,0);
-   GetNumOfWins(DS,15,&number_of_wins); // 340
-   AddStudent(DS,50,3,42);
-   GetStudentTeamLeader(DS,23,&leader);
-   JoinTeams(DS,2,9);
-   GetStudentTeamLeader(DS,41,&leader);
-   GetNumOfWins(DS,12,&number_of_wins);
-   TeamFight(DS,6,10,8);
-   GetNumOfWins(DS,6,&number_of_wins);
-   AddStudent(DS,27,2,64);
-   TeamFight(DS,9,7,0);
-   JoinTeams(DS,1,5); // 350
-   GetNumOfWins(DS,11,&number_of_wins);
-   AddStudent(DS,39,11,125);
-   RemoveStudent(DS,60);
-   AddStudent(DS,38,5,129);
-   RemoveStudent(DS,46);
-   GetStudentTeamLeader(DS,24,&leader);
-   TeamFight(DS,12,5,0);
-   AddStudent(DS,43,6,39);
-   RemoveStudent(DS,57);
-   AddStudent(DS,26,7,131); // 360
-   RemoveStudent(DS,3);
-   TeamFight(DS,10,10,12);
-   RemoveStudent(DS,30);
-   TeamFight(DS,6,5,3);
-   AddStudent(DS,26,14,130);
-   JoinTeams(DS,3,5);
-   GetNumOfWins(DS,8,&number_of_wins);
-   AddStudent(DS,2,7,78);
-   GetStudentTeamLeader(DS,2,&leader);
-   TeamFight(DS,2,5,0); // 370
-   RemoveStudent(DS,18);
-   RemoveStudent(DS,36);
-   AddStudent(DS,16,4,27);
-   AddStudent(DS,41,3,130);
-   AddStudent(DS,26,9,57);
-   AddStudent(DS,43,16,52);
-   RemoveStudent(DS,4);
-   GetNumOfWins(DS,4,&number_of_wins);
-   AddStudent(DS,26,13,67);
-   TeamFight(DS,2,5,7); // 380
-   GetStudentTeamLeader(DS,12,&leader);
-   GetNumOfWins(DS,13,&number_of_wins);
-   RemoveStudent(DS,52);
    GetStudentTeamLeader(DS,35,&leader);
-   TeamFight(DS,9,7,13);
-   AddStudent(DS,1,4,78);
-   GetStudentTeamLeader(DS,45,&leader);
-   JoinTeams(DS,10,15);
-   GetStudentTeamLeader(DS,26,&leader);
-   AddStudent(DS,62,8,63); // 390
-   RemoveStudent(DS,21);
-   GetNumOfWins(DS,16,&number_of_wins);
+   TeamFight(DS,15,16,1);
+   GetNumOfWins(DS,14,&number_of_wins);
+   AddStudent(DS,41,3,68);
+   TeamFight(DS,12,1,0);
+   RemoveStudent(DS,40);
+   AddStudent(DS,42,5,81);
+   RemoveStudent(DS,5); // 10
+   AddStudent(DS,48,10,89);
+   TeamFight(DS,2,13,3);
+   AddStudent(DS,8,16,44);
+   TeamFight(DS,15,6,0);
+   AddStudent(DS,37,3,116);
+   TeamFight(DS,16,14,1);
+   TeamFight(DS,9,14,4);
+   JoinTeams(DS,14,10);
+   RemoveStudent(DS,10);
+   AddStudent(DS,18,1,77); // 20
+   AddStudent(DS,17,8,47);
+   GetStudentTeamLeader(DS,52,&leader);
+   GetStudentTeamLeader(DS,10,&leader);
+   GetNumOfWins(DS,2,&number_of_wins);
+   JoinTeams(DS,3,16);
+   RemoveStudent(DS,54);
+   AddStudent(DS,50,13,40);
    RemoveStudent(DS,28);
-   AddStudent(DS,17,15,74);
-   JoinTeams(DS,2,13);
-   TeamFight(DS,8,5,10);
-   GetStudentTeamLeader(DS,46,&leader);
-   AddStudent(DS,59,16,47);
-   AddStudent(DS,18,13,78);
-   GetNumOfWins(DS,9,&number_of_wins); // 400
-   AddStudent(DS,50,3,122);
-   GetNumOfWins(DS,3,&number_of_wins);
-   AddStudent(DS,35,8,91);
-   TeamFight(DS,16,9,10);
-   GetNumOfWins(DS,11,&number_of_wins);
-   AddStudent(DS,56,5,99);
-   GetNumOfWins(DS,4,&number_of_wins);
    GetNumOfWins(DS,7,&number_of_wins);
-   TeamFight(DS,10,1,-1);
-   AddStudent(DS,49,16,21); // 410
-   TeamFight(DS,14,7,11);
-   AddStudent(DS,22,2,86);
-   GetNumOfWins(DS,11,&number_of_wins);
-   GetNumOfWins(DS,16,&number_of_wins);
-   AddStudent(DS,33,8,55);
-   GetStudentTeamLeader(DS,24,&leader);
-   GetNumOfWins(DS,16,&number_of_wins);
-   GetNumOfWins(DS,12,&number_of_wins);
-   GetStudentTeamLeader(DS,8,&leader);
-   AddStudent(DS,30,10,102); // 420
-   AddStudent(DS,3,12,32);
-   JoinTeams(DS,16,16);
-   AddStudent(DS,49,4,132);
-   GetNumOfWins(DS,12,&number_of_wins);
-   GetNumOfWins(DS,16,&number_of_wins);
-   TeamFight(DS,6,6,14);
-   TeamFight(DS,10,16,10);
-   GetStudentTeamLeader(DS,1,&leader);
-   JoinTeams(DS,2,11);
-   GetNumOfWins(DS,8,&number_of_wins); // 430
-   AddStudent(DS,39,5,117);
-   AddStudent(DS,3,4,7);
-   AddStudent(DS,39,15,40);
-   RemoveStudent(DS,10);
-   AddStudent(DS,4,3,128);
-   TeamFight(DS,5,5,12);
-   GetStudentTeamLeader(DS,12,&leader);
-   GetNumOfWins(DS,14,&number_of_wins);
-   GetStudentTeamLeader(DS,19,&leader);
-   AddStudent(DS,55,4,26); // 440
-   JoinTeams(DS,12,6);
-   TeamFight(DS,5,2,-1);
-   GetNumOfWins(DS,15,&number_of_wins);
-   TeamFight(DS,13,6,-1);
-   TeamFight(DS,1,3,5);
-   AddStudent(DS,17,12,48);
-   GetNumOfWins(DS,13,&number_of_wins);
-   TeamFight(DS,11,8,-1);
-   GetNumOfWins(DS,7,&number_of_wins);
-   GetNumOfWins(DS,11,&number_of_wins); // 450
-   TeamFight(DS,13,16,0);
-   AddStudent(DS,4,3,88);
-   TeamFight(DS,11,10,8);
-   GetStudentTeamLeader(DS,11,&leader);
-   GetNumOfWins(DS,1,&number_of_wins);
-   GetNumOfWins(DS,13,&number_of_wins);
-   AddStudent(DS,58,12,2);
-   AddStudent(DS,61,3,61);
-   GetNumOfWins(DS,6,&number_of_wins);
-   AddStudent(DS,52,1,88); // 460
-   GetStudentTeamLeader(DS,59,&leader);
-   AddStudent(DS,30,12,96);
-   TeamFight(DS,10,14,0);
-   GetStudentTeamLeader(DS,-1,&leader);
-   GetNumOfWins(DS,12,&number_of_wins);
-   JoinTeams(DS,1,4);
-   AddStudent(DS,31,15,53);
-   GetNumOfWins(DS,14,&number_of_wins);
-   GetStudentTeamLeader(DS,63,&leader);
-   TeamFight(DS,10,6,3); // 470
-   GetNumOfWins(DS,1,&number_of_wins);
-   RemoveStudent(DS,63);
-   RemoveStudent(DS,10);
-   GetNumOfWins(DS,16,&number_of_wins);
-   TeamFight(DS,5,2,2);
+   TeamFight(DS,16,7,0); // 30
+   AddStudent(DS,31,5,118);
+   TeamFight(DS,2,14,2);
+   AddStudent(DS,18,1,46);
+   AddStudent(DS,32,2,86);
    RemoveStudent(DS,20);
-   AddStudent(DS,28,5,36);
-   AddStudent(DS,0,16,2);
-   TeamFight(DS,13,1,7);
-   GetNumOfWins(DS,1,&number_of_wins); // 480
+   TeamFight(DS,8,14,-1);
+   AddStudent(DS,61,3,21);
+   GetStudentTeamLeader(DS,45,&leader);
+   AddStudent(DS,49,16,101);
+   AddStudent(DS,29,12,54); // 40
+   TeamFight(DS,11,15,3);
    GetNumOfWins(DS,11,&number_of_wins);
-   TeamFight(DS,10,3,14);
-   AddStudent(DS,42,15,43);
+   TeamFight(DS,11,7,3);
+   GetNumOfWins(DS,11,&number_of_wins);
+   RemoveStudent(DS,42);
+   AddStudent(DS,10,2,3);
+   TeamFight(DS,14,6,0);
+   GetStudentTeamLeader(DS,25,&leader);
+   GetStudentTeamLeader(DS,4,&leader);
+   TeamFight(DS,15,4,-1); // 50
+   AddStudent(DS,59,15,40);
+   AddStudent(DS,44,12,76);
+   RemoveStudent(DS,39);
+   AddStudent(DS,5,10,47);
+   TeamFight(DS,11,7,3);
+   TeamFight(DS,4,16,4);
+   JoinTeams(DS,8,7);
+   GetNumOfWins(DS,14,&number_of_wins);
+   AddStudent(DS,60,3,72);
+   AddStudent(DS,61,8,61); // 60
+   TeamFight(DS,10,6,7);
+   GetStudentTeamLeader(DS,16,&leader);
    GetNumOfWins(DS,5,&number_of_wins);
-   AddStudent(DS,29,16,124);
-   TeamFight(DS,7,11,12);
-   GetStudentTeamLeader(DS,19,&leader);
+   GetNumOfWins(DS,15,&number_of_wins);
+   GetStudentTeamLeader(DS,34,&leader);
+   RemoveStudent(DS,44);
    GetNumOfWins(DS,12,&number_of_wins);
-   AddStudent(DS,12,16,66);
-   GetNumOfWins(DS,2,&number_of_wins); // 490
-   TeamFight(DS,7,13,6);
-   AddStudent(DS,48,10,45);
+   TeamFight(DS,14,10,5);
+   RemoveStudent(DS,59);
+   RemoveStudent(DS,10); // 70
+   GetNumOfWins(DS,2,&number_of_wins);
+   GetNumOfWins(DS,1,&number_of_wins);
+   JoinTeams(DS,13,15);
+   JoinTeams(DS,3,8);
+   TeamFight(DS,13,4,3);
+   JoinTeams(DS,8,16);
+   AddStudent(DS,14,14,47);
+   TeamFight(DS,15,1,0);
+   TeamFight(DS,5,11,0);
+   GetNumOfWins(DS,3,&number_of_wins); // 80
+   JoinTeams(DS,10,8);
+   AddStudent(DS,-1,9,103);
+   RemoveStudent(DS,52);
+   AddStudent(DS,6,1,131);
+   AddStudent(DS,46,5,101);
+   AddStudent(DS,13,10,69);
+   TeamFight(DS,4,4,9);
+   TeamFight(DS,4,16,-1);
+   GetStudentTeamLeader(DS,51,&leader);
+   AddStudent(DS,4,14,102); // 90
+   TeamFight(DS,12,11,2);
+   AddStudent(DS,-1,9,83);
+   GetNumOfWins(DS,7,&number_of_wins);
+   GetStudentTeamLeader(DS,43,&leader);
+   AddStudent(DS,35,14,63);
+   RemoveStudent(DS,6);
+   GetStudentTeamLeader(DS,22,&leader);
+   GetNumOfWins(DS,12,&number_of_wins);
+   GetStudentTeamLeader(DS,15,&leader);
+   RemoveStudent(DS,17); // 100
+   AddStudent(DS,3,15,75);
+   TeamFight(DS,7,3,-1);
+   RemoveStudent(DS,2);
+   JoinTeams(DS,4,1);
+   TeamFight(DS,4,4,4);
+   GetNumOfWins(DS,2,&number_of_wins);
+   AddStudent(DS,43,2,76);
+   GetNumOfWins(DS,16,&number_of_wins);
+   GetNumOfWins(DS,15,&number_of_wins);
+   TeamFight(DS,8,14,6); // 110
+   AddStudent(DS,11,3,58);
+   AddStudent(DS,44,2,95);
+   AddStudent(DS,34,15,8);
    GetNumOfWins(DS,3,&number_of_wins);
-   RemoveStudent(DS,51);
-   JoinTeams(DS,3,6);
-   GetStudentTeamLeader(DS,60,&leader);
+   AddStudent(DS,60,9,96);
+   TeamFight(DS,14,11,2);
+   AddStudent(DS,23,11,105);
+   JoinTeams(DS,4,7);
+   AddStudent(DS,56,13,15);
+   RemoveStudent(DS,50); // 120
+   TeamFight(DS,7,4,5);
+   TeamFight(DS,14,15,6);
+   RemoveStudent(DS,16);
+   GetStudentTeamLeader(DS,36,&leader);
+   JoinTeams(DS,11,2);
+   GetStudentTeamLeader(DS,31,&leader);
+   GetStudentTeamLeader(DS,30,&leader);
+   AddStudent(DS,31,6,86);
+   TeamFight(DS,8,1,7);
+   GetNumOfWins(DS,3,&number_of_wins); // 130
+   GetStudentTeamLeader(DS,30,&leader);
+   AddStudent(DS,9,10,127);
+   JoinTeams(DS,3,5);
+   TeamFight(DS,16,16,4);
+   GetNumOfWins(DS,11,&number_of_wins);
+   GetStudentTeamLeader(DS,40,&leader);
+   RemoveStudent(DS,6);
+   GetNumOfWins(DS,10,&number_of_wins);
+   JoinTeams(DS,3,9);
+   GetNumOfWins(DS,11,&number_of_wins); // 140
+   TeamFight(DS,5,2,0);
+   GetStudentTeamLeader(DS,59,&leader);
+   AddStudent(DS,41,8,2);
+   AddStudent(DS,39,10,96);
+   TeamFight(DS,12,7,2);
+   AddStudent(DS,36,7,118);
+   TeamFight(DS,14,9,1);
+   GetNumOfWins(DS,6,&number_of_wins);
+   TeamFight(DS,6,5,7);
+   GetNumOfWins(DS,13,&number_of_wins); // 150
+   GetStudentTeamLeader(DS,39,&leader);
+   GetStudentTeamLeader(DS,1,&leader);
+   AddStudent(DS,38,13,126);
+   GetNumOfWins(DS,8,&number_of_wins);
+   TeamFight(DS,7,2,0);
+   TeamFight(DS,15,6,8);
+   AddStudent(DS,38,13,103);
+   AddStudent(DS,51,5,85);
+   TeamFight(DS,14,11,0);
+   AddStudent(DS,17,9,88); // 160
+   TeamFight(DS,10,4,0);
+   TeamFight(DS,16,3,8);
+   GetNumOfWins(DS,7,&number_of_wins);
+   TeamFight(DS,10,6,8);
    RemoveStudent(DS,56);
-   TeamFight(DS,16,2,13);
-   TeamFight(DS,15,10,14);
-   TeamFight(DS,8,8,2); // 500
-   AddStudent(DS,62,9,95);
+   AddStudent(DS,51,1,103);
+   JoinTeams(DS,9,2);
+   GetNumOfWins(DS,5,&number_of_wins);
+   JoinTeams(DS,14,7);
+   AddStudent(DS,18,1,89); // 170
+   JoinTeams(DS,2,5);
+   GetNumOfWins(DS,15,&number_of_wins);
+   GetStudentTeamLeader(DS,45,&leader);
+   GetNumOfWins(DS,15,&number_of_wins);
+   JoinTeams(DS,9,10);
+   GetNumOfWins(DS,1,&number_of_wins);
+   AddStudent(DS,7,12,14);
+   AddStudent(DS,51,3,46);
+   TeamFight(DS,8,15,3);
+   GetNumOfWins(DS,5,&number_of_wins); // 180
+   GetStudentTeamLeader(DS,57,&leader);
+   TeamFight(DS,3,13,9);
+   GetStudentTeamLeader(DS,39,&leader);
+   GetNumOfWins(DS,5,&number_of_wins);
+   AddStudent(DS,36,12,95);
+   GetStudentTeamLeader(DS,47,&leader);
+   RemoveStudent(DS,44);
+   TeamFight(DS,12,3,-1);
+   TeamFight(DS,12,2,3);
+   GetNumOfWins(DS,10,&number_of_wins); // 190
+   AddStudent(DS,47,5,50);
+   AddStudent(DS,25,8,112);
+   AddStudent(DS,23,7,73);
+   TeamFight(DS,15,11,3);
+   TeamFight(DS,15,13,3);
+   AddStudent(DS,15,15,40);
+   TeamFight(DS,2,8,0);
+   JoinTeams(DS,16,14);
+   AddStudent(DS,17,16,84);
+   AddStudent(DS,42,10,9); // 200
+   TeamFight(DS,8,12,7);
+   TeamFight(DS,15,12,9);
+   AddStudent(DS,39,2,108);
+   AddStudent(DS,51,8,94);
+   RemoveStudent(DS,63);
+   TeamFight(DS,1,13,2);
+   GetStudentTeamLeader(DS,50,&leader);
+   GetStudentTeamLeader(DS,28,&leader);
+   TeamFight(DS,1,4,7);
+   AddStudent(DS,54,5,62); // 210
+   GetNumOfWins(DS,16,&number_of_wins);
+   AddStudent(DS,52,2,123);
+   GetNumOfWins(DS,15,&number_of_wins);
+   GetNumOfWins(DS,14,&number_of_wins);
+   TeamFight(DS,4,7,-1);
+   RemoveStudent(DS,47);
+   TeamFight(DS,14,5,3);
+   TeamFight(DS,10,12,-1);
+   GetStudentTeamLeader(DS,62,&leader);
+   AddStudent(DS,63,11,58); // 220
+   RemoveStudent(DS,19);
+   TeamFight(DS,7,7,2);
+   TeamFight(DS,9,9,4);
+   TeamFight(DS,13,7,8);
+   AddStudent(DS,48,15,135);
+   GetNumOfWins(DS,10,&number_of_wins);
+   AddStudent(DS,36,4,57);
+   GetStudentTeamLeader(DS,43,&leader);
+   AddStudent(DS,38,16,24);
+   GetStudentTeamLeader(DS,60,&leader); // 230
+   TeamFight(DS,3,3,2);
+   TeamFight(DS,6,8,7);
+   AddStudent(DS,48,15,38);
+   AddStudent(DS,32,16,35);
+   TeamFight(DS,3,16,12);
+   GetStudentTeamLeader(DS,7,&leader);
+   AddStudent(DS,26,2,39);
+   GetNumOfWins(DS,6,&number_of_wins);
+   RemoveStudent(DS,31);
+   GetNumOfWins(DS,8,&number_of_wins); // 240
+   AddStudent(DS,53,1,123);
+   AddStudent(DS,41,4,61);
+   TeamFight(DS,16,11,-1);
+   AddStudent(DS,37,8,40);
+   RemoveStudent(DS,32);
+   JoinTeams(DS,3,10);
+   AddStudent(DS,55,8,29);
+   JoinTeams(DS,10,3);
+   AddStudent(DS,33,15,9);
+   GetStudentTeamLeader(DS,2,&leader); // 250
+   GetStudentTeamLeader(DS,48,&leader);
+   TeamFight(DS,7,7,11);
+   JoinTeams(DS,14,2);
+   TeamFight(DS,1,12,3);
+   JoinTeams(DS,12,10);
+   TeamFight(DS,3,12,5);
+   GetNumOfWins(DS,14,&number_of_wins);
+   GetNumOfWins(DS,9,&number_of_wins);
+   TeamFight(DS,12,6,11);
+   GetStudentTeamLeader(DS,46,&leader); // 260
+   TeamFight(DS,2,10,6);
+   RemoveStudent(DS,48);
+   RemoveStudent(DS,15);
+   AddStudent(DS,9,1,83);
+   AddStudent(DS,57,16,57);
+   TeamFight(DS,16,13,1);
+   GetStudentTeamLeader(DS,20,&leader);
+   AddStudent(DS,32,4,16);
+   GetStudentTeamLeader(DS,42,&leader);
+   GetNumOfWins(DS,3,&number_of_wins); // 270
+   RemoveStudent(DS,2);
+   GetStudentTeamLeader(DS,49,&leader);
+   GetNumOfWins(DS,16,&number_of_wins);
+   AddStudent(DS,30,13,122);
+   RemoveStudent(DS,49);
+   TeamFight(DS,1,5,8);
+   AddStudent(DS,46,2,66);
+   AddStudent(DS,23,1,48);
+   GetNumOfWins(DS,11,&number_of_wins);
+   AddStudent(DS,6,8,93); // 280
+   TeamFight(DS,9,10,0);
+   GetStudentTeamLeader(DS,21,&leader);
+   GetNumOfWins(DS,12,&number_of_wins);
+   JoinTeams(DS,15,16);
+   GetStudentTeamLeader(DS,32,&leader);
+   GetNumOfWins(DS,6,&number_of_wins);
+   JoinTeams(DS,15,5);
+   AddStudent(DS,21,14,29);
+   GetNumOfWins(DS,11,&number_of_wins);
+   GetStudentTeamLeader(DS,54,&leader); // 290
+   GetStudentTeamLeader(DS,18,&leader);
+   RemoveStudent(DS,15);
+   JoinTeams(DS,7,3);
+   RemoveStudent(DS,63);
+   RemoveStudent(DS,17);
+   JoinTeams(DS,15,6);
+   RemoveStudent(DS,35);
+   AddStudent(DS,5,14,27);
+   GetNumOfWins(DS,14,&number_of_wins);
+   GetNumOfWins(DS,12,&number_of_wins); // 300
+   AddStudent(DS,21,8,10);
+   GetNumOfWins(DS,2,&number_of_wins);
+   AddStudent(DS,54,7,25);
+   TeamFight(DS,14,12,5);
+   RemoveStudent(DS,11);
+   JoinTeams(DS,6,13);
+   RemoveStudent(DS,46);
+   TeamFight(DS,12,2,1);
+   JoinTeams(DS,11,9);
+   AddStudent(DS,21,4,38); // 310
+   GetStudentTeamLeader(DS,54,&leader);
+   RemoveStudent(DS,63);
+   AddStudent(DS,13,4,117);
+   AddStudent(DS,0,5,77);
+   TeamFight(DS,15,2,9);
+   RemoveStudent(DS,23);
+   RemoveStudent(DS,23);
+   GetStudentTeamLeader(DS,54,&leader);
+   GetStudentTeamLeader(DS,55,&leader);
+   TeamFight(DS,10,12,4); // 320
+   GetStudentTeamLeader(DS,14,&leader);
+   GetStudentTeamLeader(DS,59,&leader);
+   AddStudent(DS,33,8,103);
+   TeamFight(DS,16,14,2);
+   GetStudentTeamLeader(DS,25,&leader);
+   GetNumOfWins(DS,16,&number_of_wins);
+   TeamFight(DS,5,3,-1);
+   JoinTeams(DS,13,14);
+   AddStudent(DS,27,10,126);
+   AddStudent(DS,37,13,27); // 330
+   AddStudent(DS,6,13,2);
+   TeamFight(DS,8,11,5);
+   GetStudentTeamLeader(DS,48,&leader);
+   AddStudent(DS,5,16,107);
+   TeamFight(DS,12,4,7);
+   AddStudent(DS,25,15,132);
+   GetStudentTeamLeader(DS,21,&leader);
+   AddStudent(DS,12,13,63);
+   RemoveStudent(DS,9);
+   AddStudent(DS,50,6,61); // 340
+   TeamFight(DS,15,11,8);
+   GetNumOfWins(DS,3,&number_of_wins);
+   AddStudent(DS,10,1,76);
+   TeamFight(DS,2,12,6);
+   TeamFight(DS,10,5,-1);
+   AddStudent(DS,28,3,124);
+   GetStudentTeamLeader(DS,61,&leader);
+   GetStudentTeamLeader(DS,62,&leader);
+   JoinTeams(DS,7,8);
+   GetNumOfWins(DS,10,&number_of_wins); // 350
+   TeamFight(DS,8,2,14);
+   RemoveStudent(DS,60);
+   GetNumOfWins(DS,15,&number_of_wins);
+   AddStudent(DS,56,16,61);
+   GetStudentTeamLeader(DS,51,&leader);
+   RemoveStudent(DS,58);
+   GetNumOfWins(DS,15,&number_of_wins);
+   AddStudent(DS,28,13,60);
+   GetNumOfWins(DS,1,&number_of_wins);
+   AddStudent(DS,23,16,41); // 360
+   AddStudent(DS,24,4,101);
+   GetNumOfWins(DS,7,&number_of_wins);
+   AddStudent(DS,59,6,64);
+   TeamFight(DS,3,8,3);
+   TeamFight(DS,11,9,10);
+   GetNumOfWins(DS,6,&number_of_wins);
+   AddStudent(DS,0,13,119);
+   JoinTeams(DS,1,10);
+   AddStudent(DS,61,5,62);
+   TeamFight(DS,1,10,5); // 370
+   GetNumOfWins(DS,13,&number_of_wins);
+   GetNumOfWins(DS,15,&number_of_wins);
+   AddStudent(DS,60,9,71);
+   AddStudent(DS,54,11,111);
+   TeamFight(DS,9,15,3);
+   GetStudentTeamLeader(DS,58,&leader);
+   GetNumOfWins(DS,4,&number_of_wins);
+   AddStudent(DS,49,11,135);
+   AddStudent(DS,3,8,40);
+   TeamFight(DS,6,13,11); // 380
+   TeamFight(DS,14,15,10);
+   AddStudent(DS,40,5,108);
+   GetNumOfWins(DS,13,&number_of_wins);
+   JoinTeams(DS,5,8);
+   TeamFight(DS,15,12,9);
+   AddStudent(DS,15,12,18);
+   RemoveStudent(DS,43);
+   GetNumOfWins(DS,8,&number_of_wins);
+   RemoveStudent(DS,55);
+   AddStudent(DS,29,14,92); // 390
+   TeamFight(DS,12,1,8);
+   GetNumOfWins(DS,1,&number_of_wins);
+   AddStudent(DS,54,16,-1);
+   AddStudent(DS,62,1,109);
+   AddStudent(DS,60,8,32);
+   GetNumOfWins(DS,10,&number_of_wins);
+   TeamFight(DS,10,7,6);
+   GetNumOfWins(DS,13,&number_of_wins);
+   JoinTeams(DS,12,15);
+   AddStudent(DS,20,15,10); // 400
+   AddStudent(DS,21,7,57);
+   RemoveStudent(DS,59);
+   AddStudent(DS,25,11,76);
+   GetNumOfWins(DS,9,&number_of_wins);
+   GetStudentTeamLeader(DS,63,&leader);
+   TeamFight(DS,5,2,-1);
+   GetNumOfWins(DS,14,&number_of_wins);
+   GetNumOfWins(DS,5,&number_of_wins);
+   TeamFight(DS,2,11,-1);
+   TeamFight(DS,1,6,1); // 410
+   AddStudent(DS,25,12,36);
+   TeamFight(DS,4,6,2);
+   AddStudent(DS,10,8,62);
+   GetStudentTeamLeader(DS,49,&leader);
+   AddStudent(DS,63,13,46);
+   GetNumOfWins(DS,15,&number_of_wins);
+   TeamFight(DS,4,1,3);
+   GetStudentTeamLeader(DS,60,&leader);
+   AddStudent(DS,53,16,115);
+   TeamFight(DS,9,6,9); // 420
+   RemoveStudent(DS,2);
+   TeamFight(DS,7,14,5);
+   GetNumOfWins(DS,8,&number_of_wins);
+   GetNumOfWins(DS,14,&number_of_wins);
+   AddStudent(DS,42,8,69);
+   GetStudentTeamLeader(DS,44,&leader);
+   GetNumOfWins(DS,5,&number_of_wins);
+   GetNumOfWins(DS,13,&number_of_wins);
+   GetStudentTeamLeader(DS,9,&leader);
+   TeamFight(DS,2,13,3); // 430
+   GetStudentTeamLeader(DS,52,&leader);
+   GetStudentTeamLeader(DS,-1,&leader);
+   GetNumOfWins(DS,5,&number_of_wins);
+   AddStudent(DS,10,7,69);
+   TeamFight(DS,6,2,6);
+   AddStudent(DS,63,4,37);
+   GetStudentTeamLeader(DS,57,&leader);
+   TeamFight(DS,8,16,0);
+   AddStudent(DS,29,12,4);
+   TeamFight(DS,7,11,7); // 440
+   TeamFight(DS,16,11,10);
+   TeamFight(DS,16,7,4);
+   RemoveStudent(DS,7);
+   GetNumOfWins(DS,1,&number_of_wins);
+   GetStudentTeamLeader(DS,62,&leader);
+   RemoveStudent(DS,0);
+   AddStudent(DS,39,2,27);
+   GetStudentTeamLeader(DS,56,&leader);
+   AddStudent(DS,34,1,51);
+   GetNumOfWins(DS,3,&number_of_wins); // 450
+   AddStudent(DS,62,10,80);
+   AddStudent(DS,17,9,119);
+   GetStudentTeamLeader(DS,0,&leader);
+   AddStudent(DS,44,4,119);
+   RemoveStudent(DS,36);
+   TeamFight(DS,15,7,0);
+   AddStudent(DS,33,10,28);
+   TeamFight(DS,12,8,2);
+   RemoveStudent(DS,7);
+   GetNumOfWins(DS,1,&number_of_wins); // 460
+   RemoveStudent(DS,22);
+   AddStudent(DS,49,10,126);
+   RemoveStudent(DS,55);
+   AddStudent(DS,0,10,76);
+   AddStudent(DS,24,6,107);
+   AddStudent(DS,5,7,130);
+   JoinTeams(DS,9,4);
+   TeamFight(DS,14,12,9);
+   AddStudent(DS,40,13,128);
+   RemoveStudent(DS,30); // 470
+   AddStudent(DS,27,1,20);
+   GetNumOfWins(DS,16,&number_of_wins);
+   TeamFight(DS,6,4,1);
+   AddStudent(DS,50,3,47);
+   RemoveStudent(DS,63);
+   GetStudentTeamLeader(DS,38,&leader);
+   GetStudentTeamLeader(DS,25,&leader);
+   RemoveStudent(DS,60);
+   RemoveStudent(DS,25);
+   AddStudent(DS,60,11,87); // 480
+   JoinTeams(DS,1,4);
+   TeamFight(DS,5,1,9);
+   TeamFight(DS,2,8,8);
+   JoinTeams(DS,13,7);
+   TeamFight(DS,12,8,0);
+   TeamFight(DS,14,11,5);
+   RemoveStudent(DS,7);
+   RemoveStudent(DS,50);
+   AddStudent(DS,7,1,115);
+   TeamFight(DS,9,15,1); // 490
+   GetNumOfWins(DS,15,&number_of_wins);
+   RemoveStudent(DS,46);
+   AddStudent(DS,50,3,52);
+   RemoveStudent(DS,34);
+   TeamFight(DS,7,13,2);
+   TeamFight(DS,11,12,2);
+   GetNumOfWins(DS,8,&number_of_wins);
+   AddStudent(DS,52,5,72);
+   GetNumOfWins(DS,13,&number_of_wins);
+   RemoveStudent(DS,4); // 500
+   GetNumOfWins(DS,12,&number_of_wins);
    Quit(&DS);
 }

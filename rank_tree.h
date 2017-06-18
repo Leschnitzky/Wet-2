@@ -1055,7 +1055,9 @@ void RankTree<Key, Data>::handleBF(List<RankTreeNode<Key, Data>*>& route,
 			if ((*it)->GetHeightLeft() > (*it)->GetHeightRight()) {
 				(*it)->SetHeight((*it)->GetHeightLeft() + 1);
 			}
-			(*it)->SetHeight((*it)->GetHeightRight() + 1);
+			else {
+				(*it)->SetHeight((*it)->GetHeightRight() + 1);
+			}
 			break;
 		case Remove:
 			if ((*it)->IsLeaf()) {
@@ -1064,8 +1066,9 @@ void RankTree<Key, Data>::handleBF(List<RankTreeNode<Key, Data>*>& route,
 			}
 			if ((*it)->GetHeightLeft() > (*it)->GetHeightRight()) {
 				(*it)->SetHeight((*it)->GetHeightLeft() + 1);
+			} else {
+				(*it)->SetHeight((*it)->GetHeightRight() + 1);
 			}
-			(*it)->SetHeight((*it)->GetHeightRight() + 1);
 			break;
 		default:
 			break;										//otherwise, do nothing
@@ -1129,7 +1132,7 @@ void RankTree<Key, Data>::Inorder_aux(RankTreeNode<Key, Data>* root) {
 		return;
 	Inorder_aux(root->GetLeft());
 	std::cout << root->GetKey()->GetID() << " -(" << root->GetKey()->GetPower() << ","
-			<< root->GetNodesLeft() << "," << root->GetNodesRight() <<") , ";
+			<< root->GetHeightLeft() << "," << root->GetHeightRight() <<") , ";
 	Inorder_aux(root->GetRight());
 }
 
@@ -1187,7 +1190,6 @@ RankTreeNode<Key, Data>* BalancedTreeFromArray(RankTreeNode<Key, Data>** arr,
 
 template<class Key, class Data>
 void SetBalancedTreeHeight(RankTreeNode<Key, Data>* root) {
-
 	if (root == nullptr) {
 		return;
 	} else if (root->IsLeaf()) {
