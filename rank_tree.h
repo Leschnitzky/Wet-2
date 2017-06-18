@@ -147,6 +147,21 @@ public:
 	void SetupTreeRanks(RankTreeNode<Key, Data>* root);
 	Key getBiggestKey();
 	void DeleteEntireTree();
+	bool IsTreeValid() {
+		return TreeValidAux(this->root, this->size());
+	}
+
+	bool TreeValidAux(RankTreeNode<Key, Data>* root, int prev) {
+		if(root == nullptr)
+			return true;
+		else if(root->GetHeight() < prev) {
+			bool checkl = TreeValidAux(root->GetLeft(), root->GetHeight());
+			bool checkr = TreeValidAux(root->GetRight(), root->GetHeight());
+			return (checkr && checkl);
+		}
+		else
+			return false;
+	}
 	// Test Functions/////
 	bool testAllBFs(RankTreeNode<Key, Data>* node) {
 		if (!node) {

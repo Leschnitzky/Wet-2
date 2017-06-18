@@ -43,6 +43,8 @@ void Team::AddStudent(Student* student) {
 		if(this->most_powerful.GetKey() > student->GetID())
 			this->most_powerful = Pair<int, int>(student->GetID(), student->GetPower());
 	this->team_size++;
+	std::cout << "In AddStudent " << student->GetID() << std::endl;
+	std::cout << "-- Is valid? " << this->team_students.IsTreeValid() << std::endl;
 }
 
 void Team::RemoveStudent(Student* student) {
@@ -59,6 +61,8 @@ void Team::RemoveStudent(Student* student) {
 	}
 	Student* next_most = this->team_students.getBiggestKey();
 	this->most_powerful = Pair<int,int>(next_most->GetID(), next_most->GetPower());
+	std::cout << "In RemoveStudent " << student->GetID() << std::endl;;
+	std::cout << "-- Is valid? " << this->team_students.IsTreeValid() << std::endl;
 }
 
 int Team::MostPowerfulInGroup() {
