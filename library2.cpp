@@ -79,7 +79,7 @@ StatusType GetNumOfWins(void *DS, int Team, int* Wins) {
 		*Wins = ((School*)DS)->GetNumOfWins(Team);
 		return SUCCESS;
 	} catch(InvalidArg& e) {
-		return FAILURE;
+		return INVALID_INPUT;
 	}
 }
 

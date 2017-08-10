@@ -1,102 +1,502 @@
 Init done.
+TeamFight: SUCCESS
+Team 24 won 0 times.
 JoinTeams: SUCCESS
-Team 4 won 0 times.
+Team 5 won 0 times.
+RemoveStudent: FAILURE
+AddStudent: SUCCESS
+JoinTeams: SUCCESS
+Team 2 won 0 times.
+AddStudent: SUCCESS
+The leader is: 35
+JoinTeams: SUCCESS
+GetStudentLeader: FAILURE
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
 GetStudentLeader: FAILURE
 JoinTeams: SUCCESS
+AddStudent: FAILURE
+TeamFight: SUCCESS
+The leader is: 25
+JoinTeams: SUCCESS
+TeamFight: SUCCESS
 AddStudent: SUCCESS
+RemoveStudent: INVALID_INPUT
+GetStudentLeader: FAILURE
+JoinTeams: SUCCESS
+RemoveStudent: SUCCESS
+RemoveStudent: FAILURE
+RemoveStudent: FAILURE
+AddStudent: SUCCESS
+JoinTeams: SUCCESS
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
 AddStudent: INVALID_INPUT
+JoinTeams: SUCCESS
+AddStudent: SUCCESS
+Team 31 won 0 times.
+Team 24 won 0 times.
+AddStudent: SUCCESS
+Team 21 won 0 times.
+JoinTeams: SUCCESS
+The leader is: 35
+AddStudent: SUCCESS
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+Team 24 won 0 times.
+TeamFight: SUCCESS
+TeamFight: INVALID_INPUT
+JoinTeams: SUCCESS
+The leader is: 8
+AddStudent: INVALID_INPUT
+RemoveStudent: FAILURE
+RemoveStudent: FAILURE
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+TeamFight: SUCCESS
+RemoveStudent: FAILURE
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+The leader is: 25
+GetStudentLeader: INVALID_INPUT
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+AddStudent: SUCCESS
+RemoveStudent: SUCCESS
+JoinTeams: SUCCESS
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+RemoveStudent: SUCCESS
+AddStudent: SUCCESS
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+TeamFight: SUCCESS
+TeamFight: SUCCESS
 Team 7 won 0 times.
 AddStudent: SUCCESS
 JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+RemoveStudent: SUCCESS
+The leader is: 40
+RemoveStudent: FAILURE
+JoinTeams: SUCCESS
 RemoveStudent: FAILURE
 AddStudent: SUCCESS
-AddStudent: SUCCESS
+TeamFight: INVALID_INPUT
+AddStudent: FAILURE
+The leader is: 40
+Team 3 won 2 times.
+JoinTeams: SUCCESS
 TeamFight: SUCCESS
+JoinTeams: SUCCESS
+RemoveStudent: SUCCESS
+TeamFight: SUCCESS
+AddStudent: FAILURE
 TeamFight: SUCCESS
 RemoveStudent: FAILURE
-The leader is: 23
-TeamFight: INVALID_INPUT
+TeamFight: SUCCESS
+TeamFight: SUCCESS
 AddStudent: SUCCESS
+Team 13 won 0 times.
+TeamFight: INVALID_INPUT
+RemoveStudent: SUCCESS
+TeamFight: SUCCESS
 JoinTeams: SUCCESS
 GetStudentLeader: FAILURE
-GetStudentLeader: FAILURE
-AddStudent: SUCCESS
-TeamFight: SUCCESS
-Team 8 won 0 times.
+RemoveStudent: SUCCESS
+Team 5 won 8 times.
+Team 24 won 0 times.
 TeamFight: INVALID_INPUT
 AddStudent: SUCCESS
-Team 5 won 0 times.
+RemoveStudent: SUCCESS
+RemoveStudent: SUCCESS
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+RemoveStudent: SUCCESS
+JoinTeams: SUCCESS
+TeamFight: INVALID_INPUT
+RemoveStudent: SUCCESS
+JoinTeams: SUCCESS
+AddStudent: SUCCESS
+GetStudentLeader: FAILURE
+Team 4 won 0 times.
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
 RemoveStudent: FAILURE
-Team 9 won 1 times.
+GetStudentLeader: INVALID_INPUT
+TeamFight: SUCCESS
+Team 12 won 2 times.
+JoinTeams: SUCCESS
+AddStudent: SUCCESS
+RemoveStudent: SUCCESS
+GetStudentLeader: INVALID_INPUT
+AddStudent: SUCCESS
+Team 6 won 12 times.
+JoinTeams: SUCCESS
+The leader is: 7
+AddStudent: SUCCESS
+RemoveStudent: SUCCESS
+TeamFight: SUCCESS
+RemoveStudent: SUCCESS
+Team 18 won 0 times.
+JoinTeams: SUCCESS
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+The leader is: 6
+RemoveStudent: SUCCESS
+AddStudent: INVALID_INPUT
+RemoveStudent: SUCCESS
+RemoveStudent: SUCCESS
+RemoveStudent: SUCCESS
+JoinTeams: SUCCESS
+Team 13 won 0 times.
+AddStudent: SUCCESS
+Team 17 won 13 times.
+AddStudent: SUCCESS
+AddStudent: FAILURE
+The leader is: 6
+TeamFight: SUCCESS
+RemoveStudent: SUCCESS
+AddStudent: SUCCESS
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+JoinTeams: SUCCESS
+AddStudent: SUCCESS
+JoinTeams: SUCCESS
+Team 1 won 14 times.
+JoinTeams: SUCCESS
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+AddStudent: SUCCESS
+Team 29 won 17 times.
+RemoveStudent: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+The leader is: 30
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+Team 25 won 18 times.
 GetStudentLeader: FAILURE
+AddStudent: FAILURE
+GetStudentLeader: INVALID_INPUT
+JoinTeams: SUCCESS
+AddStudent: SUCCESS
+AddStudent: SUCCESS
+AddStudent: SUCCESS
+Team 21 won 18 times.
+JoinTeams: SUCCESS
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+RemoveStudent: SUCCESS
+JoinTeams: SUCCESS
+AddStudent: SUCCESS
 RemoveStudent: FAILURE
+TeamFight: SUCCESS
+Team 22 won 18 times.
+JoinTeams: SUCCESS
+The leader is: 45
+AddStudent: INVALID_INPUT
+RemoveStudent: FAILURE
+RemoveStudent: SUCCESS
+TeamFight: SUCCESS
+RemoveStudent: SUCCESS
 AddStudent: SUCCESS
-Team 8 won 0 times.
+AddStudent: SUCCESS
 AddStudent: FAILURE
-GetStudentLeader: FAILURE
-Team 1 won 0 times.
-TeamFight: SUCCESS
-JoinTeams: SUCCESS
-AddStudent: SUCCESS
-JoinTeams: SUCCESS
-AddStudent: SUCCESS
-TeamFight: SUCCESS
-AddStudent: SUCCESS
-AddStudent: SUCCESS
-AddStudent: SUCCESS
-GetStudentLeader: FAILURE
-AddStudent: SUCCESS
-AddStudent: SUCCESS
-AddStudent: SUCCESS
-TeamFight: SUCCESS
-Team 10 won 3 times.
-AddStudent: SUCCESS
-Team 11 won 1 times.
-AddStudent: SUCCESS
-TeamFight: SUCCESS
-JoinTeams: SUCCESS
+Team 26 won 18 times.
 AddStudent: FAILURE
+RemoveStudent: SUCCESS
+AddStudent: SUCCESS
+TeamFight: SUCCESS
+Team 24 won 18 times.
+RemoveStudent: FAILURE
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+RemoveStudent: FAILURE
+AddStudent: INVALID_INPUT
+AddStudent: SUCCESS
+TeamFight: SUCCESS
+JoinTeams: INVALID_INPUT
+RemoveStudent: FAILURE
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+Team 8 won 18 times.
+The leader is: 1
+The leader is: 1
+TeamFight: SUCCESS
+AddStudent: INVALID_INPUT
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: INVALID_INPUT
+RemoveStudent: FAILURE
+JoinTeams: INVALID_INPUT
+TeamFight: SUCCESS
+RemoveStudent: SUCCESS
+TeamFight: SUCCESS
+Team 22 won 18 times.
+RemoveStudent: SUCCESS
+AddStudent: SUCCESS
+TeamFight: SUCCESS
 TeamFight: INVALID_INPUT
-The leader is: 10
-JoinTeams: SUCCESS
-Team 6 won 3 times.
-Team 6 won 3 times.
-JoinTeams: SUCCESS
 AddStudent: FAILURE
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+AddStudent: SUCCESS
+TeamFight: SUCCESS
+Team 25 won 18 times.
+TeamFight: SUCCESS
+RemoveStudent: FAILURE
+RemoveStudent: INVALID_INPUT
 AddStudent: FAILURE
+The leader is: 36
+AddStudent: SUCCESS
+RemoveStudent: FAILURE
+GetStudentLeader: FAILURE
+The leader is: 36
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+RemoveStudent: SUCCESS
+JoinTeams: SUCCESS
+The leader is: 36
+TeamFight: SUCCESS
+Team 28 won 18 times.
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+Team 13 won 18 times.
+RemoveStudent: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+TeamFight: SUCCESS
+AddStudent: FAILURE
+Team 12 won 18 times.
+TeamFight: SUCCESS
+Team 5 won 18 times.
+The leader is: 36
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+AddStudent: INVALID_INPUT
+GetStudentLeader: FAILURE
+JoinTeams: SUCCESS
+RemoveStudent: FAILURE
+JoinTeams: SUCCESS
+RemoveStudent: SUCCESS
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+Team 32 won 18 times.
+GetStudentLeader: FAILURE
+AddStudent: FAILURE
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
 AddStudent: SUCCESS
 AddStudent: FAILURE
-GetStudentLeader: FAILURE
-Team 1 won 2 times.
-TeamFight: INVALID_INPUT
-AddStudent: FAILURE
-AddStudent: FAILURE
-Team 2 won 4 times.
-GetStudentLeader: FAILURE
+The leader is: 36
+AddStudent: SUCCESS
+The leader is: 36
 GetStudentLeader: FAILURE
 TeamFight: SUCCESS
+The leader is: 36
+RemoveStudent: SUCCESS
+TeamFight: SUCCESS
+TeamFight: SUCCESS
 GetStudentLeader: FAILURE
-GetStudentLeader: FAILURE
+AddStudent: INVALID_INPUT
+RemoveStudent: SUCCESS
+TeamFight: SUCCESS
+RemoveStudent: SUCCESS
+AddStudent: SUCCESS
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+AddStudent: SUCCESS
+AddStudent: SUCCESS
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+Team 35 won 18 times.
+RemoveStudent: SUCCESS
+TeamFight: INVALID_INPUT
+TeamFight: SUCCESS
+AddStudent: FAILURE
 The leader is: 35
-Team 1 won 2 times.
-AddStudent: FAILURE
-Team 5 won 0 times.
+AddStudent: SUCCESS
+GetStudentLeader: FAILURE
+JoinTeams: SUCCESS
+AddStudent: SUCCESS
+The leader is: 35
+Team 23 won 18 times.
+RemoveStudent: SUCCESS
+Team 7 won 18 times.
+Team 23 won 18 times.
+AddStudent: SUCCESS
 JoinTeams: SUCCESS
 TeamFight: SUCCESS
-Team 11 won 2 times.
-TeamFight: SUCCESS
-TeamFight: SUCCESS
-GetStudentLeader: FAILURE
+RemoveStudent: SUCCESS
+The leader is: 35
 RemoveStudent: FAILURE
-The leader is: 4
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+RemoveStudent: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+RemoveStudent: SUCCESS
+JoinTeams: SUCCESS
+RemoveStudent: SUCCESS
+AddStudent: SUCCESS
+AddStudent: FAILURE
+Team 9 won 18 times.
+AddStudent: SUCCESS
+RemoveStudent: SUCCESS
 GetStudentLeader: FAILURE
+TeamFight: SUCCESS
+RemoveStudent: SUCCESS
+GetStudentLeader: INVALID_INPUT
+TeamFight: SUCCESS
+The leader is: 23
+RemoveStudent: SUCCESS
+JoinTeams: SUCCESS
+AddStudent: SUCCESS
+Team 3 won 18 times.
+RemoveStudent: SUCCESS
+RemoveStudent: SUCCESS
+JoinTeams: SUCCESS
+TeamFight: SUCCESS
+GetStudentLeader: FAILURE
+AddStudent: INVALID_INPUT
 AddStudent: SUCCESS
 TeamFight: SUCCESS
 RemoveStudent: SUCCESS
+The leader is: 23
+GetStudentLeader: FAILURE
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+RemoveStudent: FAILURE
+TeamFight: SUCCESS
+JoinTeams: INVALID_INPUT
+AddStudent: SUCCESS
+GetStudentLeader: FAILURE
+RemoveStudent: SUCCESS
+TeamFight: SUCCESS
 TeamFight: INVALID_INPUT
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+RemoveStudent: SUCCESS
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+TeamFight: SUCCESS
+GetStudentLeader: INVALID_INPUT
+AddStudent: FAILURE
+GetStudentLeader: FAILURE
+TeamFight: SUCCESS
+Team 6 won 18 times.
+JoinTeams: SUCCESS
+Team 20 won 18 times.
+JoinTeams: SUCCESS
 AddStudent: FAILURE
 TeamFight: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+RemoveStudent: FAILURE
 TeamFight: SUCCESS
 TeamFight: SUCCESS
-Team 6 won 6 times.
+The leader is: 23
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+AddStudent: FAILURE
+JoinTeams: SUCCESS
+AddStudent: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+TeamFight: INVALID_INPUT
+AddStudent: FAILURE
+Team 14 won 18 times.
+RemoveStudent: FAILURE
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+Team 22 won 18 times.
+RemoveStudent: SUCCESS
+AddStudent: SUCCESS
+AddStudent: SUCCESS
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+AddStudent: SUCCESS
+RemoveStudent: FAILURE
+JoinTeams: SUCCESS
+The leader is: 23
+RemoveStudent: SUCCESS
+The leader is: 23
+AddStudent: FAILURE
+GetStudentLeader: FAILURE
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+RemoveStudent: FAILURE
+RemoveStudent: SUCCESS
+JoinTeams: SUCCESS
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+GetStudentLeader: FAILURE
+JoinTeams: SUCCESS
+AddStudent: INVALID_INPUT
+AddStudent: SUCCESS
+AddStudent: FAILURE
+Team 18 won 18 times.
+GetStudentLeader: FAILURE
+JoinTeams: SUCCESS
+AddStudent: FAILURE
+Team 26 won 18 times.
+RemoveStudent: FAILURE
+RemoveStudent: INVALID_INPUT
+TeamFight: SUCCESS
+GetNumOfWins: INVALID_INPUT
+TeamFight: SUCCESS
+AddStudent: SUCCESS
+JoinTeams: SUCCESS
+JoinTeams: SUCCESS
+Team 4 won 18 times.
+RemoveStudent: SUCCESS
+TeamFight: SUCCESS
+AddStudent: FAILURE
+The leader is: 23
+Team 20 won 18 times.
+TeamFight: SUCCESS
+RemoveStudent: FAILURE
+JoinTeams: SUCCESS
+RemoveStudent: SUCCESS
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+AddStudent: SUCCESS
+The leader is: 23
+The leader is: 23
+JoinTeams: SUCCESS
+TeamFight: SUCCESS
+JoinTeams: SUCCESS
+RemoveStudent: FAILURE
+TeamFight: SUCCESS
+GetStudentLeader: FAILURE
+RemoveStudent: INVALID_INPUT
+JoinTeams: SUCCESS
+RemoveStudent: FAILURE
 Quit done.

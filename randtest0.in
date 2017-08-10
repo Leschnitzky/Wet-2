@@ -1,102 +1,502 @@
-Init 11
-JoinTeams 7 10           #S
-GetNumOfWins 4           #S
-GetStudentLeader 41      #F student doesn't exist
-JoinTeams 4 1            #S
-AddStudent 23 9 40       #S
-AddStudent 24 5 -1       #II id <= 0 or power <= 0
-GetNumOfWins 7           #S
-AddStudent 10 6 63       #S
-JoinTeams 6 7            #S
-RemoveStudent 19         #F student doesn't exist
-AddStudent 4 5 56        #S
-AddStudent 8 1 54        #S
-TeamFight 6 9 4          #S
-TeamFight 10 4 1         #S
-RemoveStudent 43         #F student doesn't exist
-GetStudentLeader 23      #S
-TeamFight 2 6 0          #II negative number of fighters
-AddStudent 27 8 24       #S
-JoinTeams 10 6           #S
-GetStudentLeader 36      #F student doesn't exist
-GetStudentLeader 21      #F student doesn't exist
-AddStudent 42 7 20       #S
-TeamFight 9 8 3          #S
-GetNumOfWins 8           #S
-TeamFight 11 9 -1        #II negative number of fighters
-AddStudent 25 11 45      #S
-GetNumOfWins 5           #S
-RemoveStudent 16         #F student doesn't exist
-GetNumOfWins 9           #S
-GetStudentLeader 13      #F student doesn't exist
-RemoveStudent 15         #F student doesn't exist
-AddStudent 38 1 53       #S
-GetNumOfWins 8           #S
-AddStudent 42 5 1        #F student already exists
-GetStudentLeader 29      #F student doesn't exist
-GetNumOfWins 1           #S
-TeamFight 9 7 2          #S
-JoinTeams 1 1            #S
-AddStudent 39 5 31       #S
-JoinTeams 2 9            #S
-AddStudent 14 7 33       #S
-TeamFight 9 2 1          #S
-AddStudent 2 9 2         #S
-AddStudent 31 5 20       #S
-AddStudent 5 4 51        #S
-GetStudentLeader 28      #F student doesn't exist
-AddStudent 13 7 31       #S
-AddStudent 35 4 59       #S
-AddStudent 15 4 43       #S
-TeamFight 3 11 9         #S
-GetNumOfWins 10          #S
-AddStudent 29 4 42       #S
-GetNumOfWins 11          #S
-AddStudent 36 2 48       #S
-TeamFight 5 1 4          #S
-JoinTeams 4 11           #S
-AddStudent 39 8 44       #F student already exists
-TeamFight 5 8 0          #II negative number of fighters
-GetStudentLeader 42      #S
-JoinTeams 10 10          #S
-GetNumOfWins 6           #S
-GetNumOfWins 6           #S
-JoinTeams 9 10           #S
-AddStudent 31 10 8       #F student already exists
-AddStudent 2 1 29        #F student already exists
-AddStudent 18 11 21      #S
-AddStudent 2 7 53        #F student already exists
-GetStudentLeader 12      #F student doesn't exist
-GetNumOfWins 1           #S
-TeamFight 8 8 0          #II negative number of fighters
-AddStudent 13 2 47       #F student already exists
-AddStudent 5 4 46        #F student already exists
-GetNumOfWins 2           #S
-GetStudentLeader 6       #F student doesn't exist
-GetStudentLeader 40      #F student doesn't exist
-TeamFight 5 6 3          #S
-GetStudentLeader 19      #F student doesn't exist
-GetStudentLeader 22      #F student doesn't exist
-GetStudentLeader 5       #S
-GetNumOfWins 1           #S
-AddStudent 25 3 4        #F student already exists
-GetNumOfWins 5           #S
-JoinTeams 4 3            #S
-TeamFight 7 2 8          #S
-GetNumOfWins 11          #S
-TeamFight 5 6 1          #S
-TeamFight 11 2 5         #S
-GetStudentLeader 11      #F student doesn't exist
-RemoveStudent 28         #F student doesn't exist
-GetStudentLeader 31      #S
-GetStudentLeader 37      #F student doesn't exist
-AddStudent 12 9 63       #S
-TeamFight 11 1 5         #S
-RemoveStudent 36         #S
-TeamFight 1 2 0          #II negative number of fighters
-AddStudent 10 9 40       #F student already exists
-TeamFight 7 3 5          #S
-TeamFight 11 9 4         #S
-TeamFight 2 6 2          #S
-GetNumOfWins 6           #S
+Init 35
+TeamFight 23 25 6
+GetNumOfWins 24
+JoinTeams 35 1
+GetNumOfWins 5
+RemoveStudent 41
+AddStudent 35 1 18
+JoinTeams 29 5
+GetNumOfWins 2
+AddStudent 25 2 7
+GetStudentLeader 35
+JoinTeams 17 35
+GetStudentLeader 46
+TeamFight 32 35 19
+TeamFight 19 7 9
+JoinTeams 25 5
+GetStudentLeader 28
+JoinTeams 15 26
+AddStudent 35 30 18
+TeamFight 19 1 12
+GetStudentLeader 25
+JoinTeams 12 7
+TeamFight 29 12 4
+AddStudent 5 25 15
+RemoveStudent -1
+GetStudentLeader 45
+JoinTeams 33 35
+RemoveStudent 5
+RemoveStudent 1
+RemoveStudent 39
+AddStudent 38 6 2
+JoinTeams 25 34
+TeamFight 20 22 14
+JoinTeams 14 6
+AddStudent 22 36 5
+JoinTeams 12 26
+AddStudent 8 14 2
+GetNumOfWins 31
+GetNumOfWins 24
+AddStudent 28 12 11
+GetNumOfWins 21
+JoinTeams 16 33
+GetStudentLeader 35
+AddStudent 40 26 18
+TeamFight 6 2 6
+AddStudent 26 16 14
+JoinTeams 2 3
+JoinTeams 11 25
+GetNumOfWins 24
+TeamFight 3 6 3
+TeamFight 36 24 9
+JoinTeams 5 1
+GetStudentLeader 8
+AddStudent 0 7 10
+RemoveStudent 39
+RemoveStudent 41
+JoinTeams 32 12
+JoinTeams 35 27
+TeamFight 10 24 3
+RemoveStudent 23
+TeamFight 23 5 7
+JoinTeams 32 15
+GetStudentLeader 25
+GetStudentLeader -5
+TeamFight 26 16 3
+AddStudent 32 20 9
+AddStudent 18 31 17
+RemoveStudent 28
+JoinTeams 11 34
+TeamFight 17 7 6
+AddStudent 6 3 8
+RemoveStudent 18
+AddStudent 3 17 15
+TeamFight 34 21 3
+AddStudent 34 11 1
+TeamFight 16 13 20
+TeamFight 12 32 5
+GetNumOfWins 7
+AddStudent 33 13 4
+JoinTeams 18 4
+JoinTeams 27 30
+RemoveStudent 32
+GetStudentLeader 40
+RemoveStudent 13
+JoinTeams 15 2
+RemoveStudent 19
+AddStudent 29 16 15
+TeamFight 36 23 8
+AddStudent 6 9 5
+GetStudentLeader 25
+GetNumOfWins 3
+JoinTeams 17 1
+TeamFight 14 9 12
+JoinTeams 5 23
+RemoveStudent 35
+TeamFight 28 20 19
+AddStudent 34 25 13
+TeamFight 31 19 16
+RemoveStudent 20
+TeamFight 33 17 4
+TeamFight 35 25 19
+AddStudent 24 34 1
+GetNumOfWins 13
+TeamFight 36 16 12
+RemoveStudent 29
+TeamFight 22 29 7
+JoinTeams 25 28
+GetStudentLeader 9
+RemoveStudent 26
+GetNumOfWins 5
+GetNumOfWins 24
+TeamFight 20 36 5
+AddStudent 9 34 2
+RemoveStudent 25
+RemoveStudent 33
+TeamFight 20 14 1
+TeamFight 23 30 17
+TeamFight 17 35 18
+AddStudent 25 30 13
+RemoveStudent 25
+JoinTeams 22 10
+TeamFight 36 32 2
+RemoveStudent 6
+JoinTeams 22 19
+AddStudent 7 35 20
+GetStudentLeader 44
+GetNumOfWins 4
+TeamFight 12 34 18
+JoinTeams 24 33
+RemoveStudent 33
+GetStudentLeader -2
+TeamFight 16 32 7
+GetNumOfWins 12
+JoinTeams 14 35
+AddStudent 11 11 4
+RemoveStudent 34
+GetStudentLeader -5
+AddStudent 30 11 14
+GetNumOfWins 6
+JoinTeams 21 32
+GetStudentLeader 3
+AddStudent 6 27 17
+RemoveStudent 3
+TeamFight 17 25 12
+RemoveStudent 7
+GetNumOfWins 18
+JoinTeams 31 30
+TeamFight 23 7 10
+AddStudent 47 18 14
+GetStudentLeader 9
+RemoveStudent 9
+AddStudent 0 12 9
+RemoveStudent 24
+RemoveStudent 38
+RemoveStudent 40
+JoinTeams 20 22
+GetNumOfWins 13
+AddStudent 13 35 8
+GetNumOfWins 17
+AddStudent 31 15 3
+AddStudent 13 1 13
+GetStudentLeader 11
+TeamFight 20 20 12
+RemoveStudent 31
+AddStudent 29 23 4
+TeamFight 4 27 6
+AddStudent 23 26 5
+JoinTeams 4 3
+AddStudent 21 1 8
+JoinTeams 21 26
+GetNumOfWins 1
+JoinTeams 12 6
+TeamFight 8 26 6
+JoinTeams 34 20
+AddStudent 18 13 11
+GetNumOfWins 29
+RemoveStudent 6
+JoinTeams 14 3
+JoinTeams 29 9
+GetStudentLeader 23
+TeamFight 29 7 13
+TeamFight 20 8 14
+AddStudent 46 6 8
+GetNumOfWins 25
+GetStudentLeader 19
+AddStudent 46 12 14
+GetStudentLeader -3
+JoinTeams 10 30
+AddStudent 20 12 1
+AddStudent 45 9 17
+AddStudent 14 35 14
+GetNumOfWins 21
+JoinTeams 14 23
+TeamFight 24 31 20
+JoinTeams 11 13
+RemoveStudent 46
+JoinTeams 2 4
+AddStudent 5 30 8
+RemoveStudent 32
+TeamFight 32 25 13
+GetNumOfWins 22
+JoinTeams 7 13
+GetStudentLeader 20
+AddStudent 0 6 5
+RemoveStudent 40
+RemoveStudent 13
+TeamFight 14 10 9
+RemoveStudent 20
+AddStudent 26 18 11
+AddStudent 24 17 13
+AddStudent 26 14 13
+GetNumOfWins 26
+AddStudent 14 17 9
+RemoveStudent 8
+AddStudent 1 7 18
+TeamFight 15 11 16
+GetNumOfWins 24
+RemoveStudent 12
+TeamFight 16 29 7
+JoinTeams 23 24
+JoinTeams 8 21
+RemoveStudent 3
+AddStudent 15 36 1
+AddStudent 20 2 9
+TeamFight 19 23 19
+JoinTeams 31 36
+RemoveStudent 25
+JoinTeams 14 33
+JoinTeams 26 1
+GetNumOfWins 8
+GetStudentLeader 47
+GetStudentLeader 18
+TeamFight 28 12 13
+AddStudent 0 30 18
+TeamFight 2 15 6
+AddStudent 36 9 20
+TeamFight 32 17 13
+TeamFight 19 13 8
+JoinTeams 21 31
+JoinTeams 29 3
+JoinTeams 22 36
+RemoveStudent 49
+JoinTeams 36 8
+TeamFight 3 9 8
+RemoveStudent 26
+TeamFight 22 31 14
+GetNumOfWins 22
+RemoveStudent 47
+AddStudent 16 8 1
+TeamFight 35 17 12
+TeamFight 15 36 20
+AddStudent 16 33 13
+JoinTeams 17 33
+JoinTeams 12 32
+AddStudent 2 15 14
+TeamFight 11 5 3
+GetNumOfWins 25
+TeamFight 18 23 12
+RemoveStudent 41
+RemoveStudent -1
+AddStudent 2 18 11
+GetStudentLeader 21
+AddStudent 46 1 2
+RemoveStudent 8
+GetStudentLeader 17
+GetStudentLeader 16
+TeamFight 7 31 15
+AddStudent 33 20 10
+RemoveStudent 11
+JoinTeams 11 26
+GetStudentLeader 21
+TeamFight 19 31 6
+GetNumOfWins 28
+JoinTeams 8 17
+JoinTeams 15 12
+GetNumOfWins 13
+RemoveStudent 21
+JoinTeams 14 5
+JoinTeams 5 23
+JoinTeams 23 3
+TeamFight 30 16 3
+AddStudent 14 7 5
+GetNumOfWins 12
+TeamFight 4 26 6
+GetNumOfWins 5
+GetStudentLeader 14
+JoinTeams 26 11
+JoinTeams 35 16
+AddStudent 0 23 15
+GetStudentLeader 19
+JoinTeams 8 33
+RemoveStudent 38
+JoinTeams 31 7
+RemoveStudent 29
+TeamFight 22 1 7
+TeamFight 22 11 11
+JoinTeams 7 12
+GetNumOfWins 32
+GetStudentLeader 10
+AddStudent 30 29 3
+TeamFight 25 10 14
+JoinTeams 14 24
+JoinTeams 35 14
+AddStudent 10 9 18
+AddStudent 5 32 7
+GetStudentLeader 18
+AddStudent 44 13 4
+GetStudentLeader 2
+GetStudentLeader 11
+TeamFight 29 21 20
+GetStudentLeader 23
+RemoveStudent 14
+TeamFight 20 21 14
+TeamFight 23 30 13
+GetStudentLeader 38
+AddStudent 40 36 11
+RemoveStudent 46
+TeamFight 12 31 6
+RemoveStudent 33
+AddStudent 35 25 20
+TeamFight 35 29 7
+TeamFight 8 30 10
+AddStudent 21 15 12
+AddStudent 27 22 17
+AddStudent 37 34 6
+TeamFight 3 12 7
+TeamFight 23 27 11
+TeamFight 34 27 18
+GetNumOfWins 35
+RemoveStudent 23
+TeamFight 36 33 13
+TeamFight 13 1 13
+AddStudent 30 18 15
+GetStudentLeader 21
+AddStudent 32 9 16
+GetStudentLeader 23
+JoinTeams 25 15
+AddStudent 34 25 16
+GetStudentLeader 20
+GetNumOfWins 23
+RemoveStudent 30
+GetNumOfWins 7
+GetNumOfWins 23
+AddStudent 46 9 5
+JoinTeams 21 32
+TeamFight 1 7 11
+RemoveStudent 18
+GetStudentLeader 2
+RemoveStudent 33
+TeamFight 17 16 5
+JoinTeams 35 23
+RemoveStudent 46
+JoinTeams 32 26
+JoinTeams 9 9
+RemoveStudent 34
+JoinTeams 12 23
+RemoveStudent 27
+AddStudent 23 27 20
+AddStudent 37 7 7
+GetNumOfWins 9
+AddStudent 42 20 4
+RemoveStudent 32
+GetStudentLeader 25
+TeamFight 22 4 19
+RemoveStudent 16
+GetStudentLeader 0
+TeamFight 25 23 17
+GetStudentLeader 5
+RemoveStudent 10
+JoinTeams 9 13
+AddStudent 34 33 4
+GetNumOfWins 3
+RemoveStudent 20
+RemoveStudent 37
+JoinTeams 28 17
+TeamFight 29 27 3
+GetStudentLeader 13
+AddStudent 23 36 4
+AddStudent 3 23 3
+TeamFight 12 11 3
+RemoveStudent 2
+GetStudentLeader 21
+GetStudentLeader 26
+JoinTeams 1 8
+JoinTeams 17 14
+JoinTeams 2 28
+JoinTeams 33 4
+RemoveStudent 47
+TeamFight 15 29 7
+JoinTeams 36 29
+AddStudent 49 9 12
+GetStudentLeader 4
+RemoveStudent 21
+TeamFight 35 20 3
+TeamFight 36 1 11
+TeamFight 28 35 16
+TeamFight 28 27 15
+RemoveStudent 44
+TeamFight 13 35 14
+JoinTeams 15 18
+TeamFight 32 19 17
+GetStudentLeader -4
+AddStudent 42 23 3
+GetStudentLeader 31
+TeamFight 5 7 5
+GetNumOfWins 6
+JoinTeams 11 35
+GetNumOfWins 20
+JoinTeams 12 15
+AddStudent 49 5 19
+TeamFight 6 9 8
+JoinTeams 24 20
+JoinTeams 6 11
+JoinTeams 2 18
+RemoveStudent 11
+TeamFight 5 20 5
+TeamFight 13 24 8
+GetStudentLeader 36
+TeamFight 7 8 19
+JoinTeams 7 11
+AddStudent 23 19 19
+JoinTeams 1 3
+AddStudent 31 27 5
+JoinTeams 28 1
+JoinTeams 20 9
+TeamFight 1 36 15
+AddStudent 5 19 4
+GetNumOfWins 14
+RemoveStudent 6
+TeamFight 24 30 1
+JoinTeams 28 5
+JoinTeams 2 26
+JoinTeams 10 13
+GetNumOfWins 22
+RemoveStudent 34
+AddStudent 22 4 3
+AddStudent 16 29 13
+TeamFight 23 18 1
+TeamFight 2 21 6
+JoinTeams 9 8
+JoinTeams 32 30
+AddStudent 50 8 9
+RemoveStudent 17
+JoinTeams 34 12
+GetStudentLeader 31
+RemoveStudent 50
+GetStudentLeader 35
+AddStudent 22 27 18
+GetStudentLeader 18
+TeamFight 23 26 3
+TeamFight 24 5 5
+JoinTeams 11 3
+RemoveStudent 4
+RemoveStudent 3
+JoinTeams 30 34
+TeamFight 12 34 4
+JoinTeams 24 4
+GetStudentLeader 46
+JoinTeams 27 17
+AddStudent 9 36 4
+AddStudent 27 10 6
+AddStudent 36 11 9
+GetNumOfWins 18
+GetStudentLeader 34
+JoinTeams 10 24
+AddStudent 16 29 5
+GetNumOfWins 26
+RemoveStudent 28
+RemoveStudent 0
+TeamFight 11 28 17
+GetNumOfWins 36
+TeamFight 22 32 11
+AddStudent 17 22 2
+JoinTeams 30 35
+JoinTeams 11 20
+GetNumOfWins 4
+RemoveStudent 5
+TeamFight 2 26 9
+AddStudent 42 16 12
+GetStudentLeader 36
+GetNumOfWins 20
+TeamFight 23 30 18
+RemoveStudent 47
+JoinTeams 29 17
+RemoveStudent 49
+TeamFight 35 23 4
+TeamFight 8 16 3
+TeamFight 5 26 15
+JoinTeams 30 4
+AddStudent 26 31 19
+GetStudentLeader 27
+GetStudentLeader 36
+JoinTeams 34 3
+TeamFight 6 34 17
+JoinTeams 27 16
+RemoveStudent 3
+TeamFight 11 27 9
+GetStudentLeader 34
+RemoveStudent -1
+JoinTeams 9 1
+RemoveStudent 19
 Quit
